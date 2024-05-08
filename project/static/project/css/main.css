@@ -12,7 +12,7 @@ body{
 }
 .main-back {
    
-    color: #ffffff;
+    color: #e11212;
     /* min-height: 5vh; */
     display: flex;
     justify-content: center;
@@ -22,7 +22,7 @@ body{
   .content {
     display: flex;
     align-items: center;
-    margin-left: 0;
+    margin-left: 100px;
     position: absolute;
     height: auto;
     width: 100%;
@@ -1637,6 +1637,9 @@ a button span:hover{
 @media (max-width: 803px){
     .content{
         left: 40px;
+    }
+    .nav .show-icons .hide{
+        padding-left: 50px;
     }
 }
 @media (max-width: 780px){

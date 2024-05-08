@@ -17,40 +17,17 @@
 <body>
     <div class="main-back">
         <div class="content">
-            <div class="nav">
-                <div class="logo top"><a href="">Site<span>forlio</span></a></div>
-                <div class="show-icons">
-                    <div class="show"><i class='bx bx-menu-alt-left'></i></div>
-                    <div class="hide">
-                        <div class="span"><i class='bx bx-x'></i></div>
-                        <ul>
-                            <li><a href="">Home</a></li>
-                            <li><a href="">About</a></li>
-                            <li><a href="">Services</a></li>
-                            <li><a href="">Works</a></li>
-                            <li ><a href="">Contact</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <ul>
-                    <li><a href="">Home</a></li>
-                    <li><a href="">About</a></li>
-                    <li><a href="">Services</a></li>
-                    <li><a href="">Works</a></li>
-                    <li ><a href="">Contact</a></li>
-                </ul>
-                <button><a href="">Let's talk</a></button>
-            </div>
+            {% include 'project/navbar.html' %}
             <div class="showcase-1">
                 <div class="name">
                     <img src="{%static 'project/images/person1.png'%}" alt="photo of developer">
                     <div class="name-left">
                         <h3>i'm a <span class="ani"></span></h3>
-                    <h1><a href="">Solomon <br>Jesse.</a></h1>
+                    <h1><a href="{% url 'about' %}">Solomon <br>Jesse.</a></h1>
                     <p>i am a Developer based in East Africa</p>
 
                     </div>
-                                        <a href=""><button class="top1">
+                                        <a href="{% url 'about' %}"><button class="top1">
                         <span class="material-symbols-outlined ">
                             touchpad_mouse
                             </span></button></a>
@@ -149,17 +126,7 @@
                 </div>
             </div>
         </div>
-        <div class="footer">
-            <h1 class="logo bottom">Site <span>forlio</span></h1>
-            <ul>
-                <li><a href="">Home</a></li>
-                <li><a href="">About</a></li>
-                <li><a href="">Services</a></li>
-                <li><a href="">Works</a></li>
-                <li><a href="">Contact</a></li>
-            </ul>
-            <h4 class="copywrite">© All rights reserved by <a href="">Solomon Jesse</a></h4>
-        </div>
+        {% include 'project/footer.html' %}
     </div>
 </body>
 </html>

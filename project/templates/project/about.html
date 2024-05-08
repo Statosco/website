@@ -1,0 +1,54 @@
+{%load static%}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="{%static 'project/css/about.css'%}">
+    <script src="https://kit.fontawesome.com/5d31dfb617.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Jersey+20+Charted&family=Jersey+25&display=swap" rel="stylesheet"></head>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Jersey+20+Charted&family=Jersey+25&family=Syne:wght@400..800&display=swap" rel="stylesheet">
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+<script src="https://kit.fontawesome.com/5d31dfb617.js" crossorigin="anonymous"></script>
+<script src="{%static 'project/js/aboutToggle.js'%}" defer></script>
+
+
+<body>
+    <div class="wrapper">
+        <div class="front-face">
+            <h1 class="about">About</h1>
+            {% include 'project/navbar.html' %}
+            
+            <div class="main-section">
+                <div class="left">
+                    <img src="{%static 'project/images/perso.png'%}" alt="">
+                </div>
+                <div class="right">
+                    <h1>Solomon  jesse <br> <span>software developer & tech enthusiast</span></h1>
+                    
+                    <p>With a passion for coding and a knack for innovation, I'm a seasoned software developer with expertise in various programming languages and frameworks. Armed with years of experience in crafting dynamic and responsive web applications, I thrive in the dynamic world of software development. From mastering JavaScript and Python to building robust systems with Django and React, my journey is defined by a relentless pursuit of excellence in code.</p>
+                    <h2>download CV<i class="fa-solid fa-download"></i></h2>
+                </div>
+                
+            </div>
+        </div>
+        <div class="about-me">
+            <div class="about-me-section">
+                <h1>about me</h1>
+                <h3>Fullstack Engineer & Developer Having close-on to 2+ Years Experience</h3>
+                <div class="about-me-content">
+                    <p class="p1"><span class="quotes">''</span> My journey as a Fullstack Engineer & Developer spans close to 2 years, marked by a dedication to mastering the intricacies of modern technology. Rooted in a passion for innovation, I've honed my skills through a multifaceted approach that encompasses both musical and academic pursuits. With over 7 years of self-taught piano experience, I've cultivated a disciplined mindset and an acute attention to detail, qualities that transcend seamlessly into my work as a developer.</p>
+                    <p class="p2">My educational foundation includes a diploma in programming studies. From Harvard University, where I delved into the realms of artificial intelligence and computer science. Armed with this knowledge, I navigate programming languages with proficiency, including JavaScript and Python at a professional level, and HTML/CSS at an advanced tier. My expertise extends to C++ at an intermediate level, while frameworks like Django and React serve as my tools for crafting dynamic and responsive web applications.</p>
+                    <p class="p3"><span class="quotes">''</span>In addition to my programming prowess, I possess advanced skills in cybersecurity and networking, backed by certifications such as A+, CCNA Security, and more. This holistic understanding allows me to build robust and secure systems that not only meet but exceed industry standards. With a relentless drive for innovation and a commitment to excellence, I stand ready to tackle challenges head-on, leveraging my expertise to drive technological advancements and make meaningful contributions to the digital landscape.</p>
+                </div>
+            </div>
+            {% include 'project/footer.html' %}
+            
+        </div>
+    </div>
+</body>
+</html>
