@@ -102,7 +102,7 @@ a:hover{
 }
 .front-face .nav button a{
     padding:30px;
-    color: #fff;
+    color: var(--white);
     font-size: 20px;
 }
 .wrapper .main-section{
@@ -497,10 +497,19 @@ font-size: 1.3em;
     }
 }
 @media screen and (max-width: 679px){
+
     body{
         overflow-x: scroll;
     }
     .wrapper{
         overflow: hidden;
     }
+}
+::-webkit-scrollbar { width: 5px; }
+
+::-webkit-scrollbar-track { background: transparent; }
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--white);
+  border-radius: 20px;
 }

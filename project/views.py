@@ -9,3 +9,6 @@ def home(response):
 def about(response):
     return render(response, 'project/about.html')
 
+def services(response):
+    return render(response, 'project/services.html')
+

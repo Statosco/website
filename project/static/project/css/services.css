@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Syne', sans-serif;
+    text-decoration: none;
+}
+:root{
+    --eerie-black: hsla(228, 9%, 10%, 1);
+    --ff-syne: 'Syne', sans-serif;
+    --white: hsla(0, 0%, 100%, 1);
+    --blob-radius: 52% 48% 59% 41% / 53% 40% 60% 47%;
+    --background-color: #2d2d2b;
+    --big-text-color: #fff;
+    --border-color:#962d2d;
+    --small-text-clor: grey;
+    --transition-1: 0.25s ease;
+}
+
+::-webkit-scrollbar { width: 5px; }
+
+::-webkit-scrollbar-track { background: transparent; }
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--white);
+  border-radius: 20px;
+}
+
+.wrapper-section{
+    
+    min-height: 100vh;
+    background: var(--background-color);
+    position: relative;
+}
+.wrapper-section .navigation{
+    background-color:var(--eerie-black);
+    top: 0;
+    left: 0;
+    padding-block: 24px;
+    z-index: 4;
+    position: fixed;
+    transition: var(--transition-1);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* opacity: 0.8; */
+}
+.wrapper-section .navigation:active{
+    background-color: var(--raisin-black);
+    padding-block: 16px;
+}
+.wrapper-section .navigation h1{
+  font-size: 38px;
+  font-weight: 700;
+  color: var(--white);
+  padding:  0 200px;
+  font-family: var(--ff-syne);
+  letter-spacing: 2px;
+  text-transform: capitalize;
+}
+.wrapper-section .navigation .menu-icons {
+  margin: 0 200px;
+}
+.wrapper-section .navigation .menu-icons .menu{
+  background: var(--white);
+  border-radius: 50%;
+  padding: 20px;
+  cursor: pointer;
+  font-size: 2rem;
+  width: 50px; /* Adjust width and height as needed */
+  height: 50px; /* Adjust width and height as needed */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: var(--transition-1);
+  opacity: 0.8;
+}
+.wrapper-section .navigation .menu-icons .menu:active{
+  transform: rotate(45deg) translate(4px, 4px);
+  opacity: 1;
+}
+
+.nav .top,
+.nav .show,
+.nav .ul
+{
+  display: none !important;
+}
+.nav
+{
+  /* display: block; */
+  background: #00000055;
+  position: absolute;
+  top: 30px;
+  min-height: 300px;
+  padding: 30px;
+  z-index: 60;
+  /* display: none; */
+  right: 20px;
+}
+
+.nav .hide{
+  display: flex;
+}
+.nav .hide .span
+{
+  color: var(--white);
+  border: 0.5px solid var(--small-text-clor);
+  position: absolute;
+  font-size: 2rem;
+  line-height: 2rem;
+  font-weight: 300;
+  padding: 2px 7px;
+  top: 10px;
+  left: 10px;
+  border-radius: 5px;
+}
+.nav .hide .span:active
+{
+  transform: scale(0.7);
+}
+.nav .hide .ul1 li{
+  list-style-type: none;
+  font-size: 20px;
+  letter-spacing: 3px;
+  margin: 30px;
+  transition: var(--transition-1);
+  border-bottom: 1px solid var(--border-color);
+  cursor: pointer;
+  text-align: center;
+  padding: 15px;
+  opacity: 0.7;
+
+}
+.nav .hide .ul1 li a{
+  color: var(--white);
+  margin-inline: auto;
+}
+.nav .hide .ul1 li:hover{
+  opacity: 1;
+  transform: scale(1.1);
+}
+.nav button {
+  border: none;
+  outline: none;
+  background: linear-gradient(135deg, rgba(255, 0, 0, 0.2), rgba(255, 0, 0, 0.0) 60%);
+  margin: 20px 40px;
+  padding: 15px;
+  border-radius: 10px;
+  color: var(--white);
+  font-size: 17px;
+  letter-spacing: 2px;
+  position: relative;
+  overflow: hidden;
+  transition: background 0.6s ease, box-shadow 0.3s ease;
+}
+
+.nav button a {
+  color: var(--white);
+  font-size: 17px;
+  letter-spacing: 2px;
+  text-decoration: none;
+}
+
+.nav button:hover {
+  background: var(--border-color);
+  box-shadow: inset 0 0 20px rgba(255, 0, 0, 0.5);
+}
+.wrapper-section .content{
+  overflow: scroll;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  padding-top: 60px;
+  margin-inline: auto;
+}
+.content .top-nav{
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+.content .top-nav .left h3{
+  text-transform: uppercase;
+  color: var(--small-text-clor);
+  font-size: 0.8rem;
+  letter-spacing: 3px;
+  font-weight: 800;
+}
+.content .top-nav .left h1{
+  font-size: 3.5rem;
+  color: var(--big-text-color);
+  letter-spacing: 2px;
+  font-weight: 700;
+  text-transform: capitalize;
+  padding-top: 20px;
+}
+.content .top-nav .right{
+  max-width: 600px;
+  margin-top: 100px;
+}
+.content .top-nav .right p{
+  color: var(--small-text-clor);
+  font-size: 0.9rem;
+  text-transform: capitalize;
+  font-weight: 900;
+  letter-spacing: 2px;
+  font-family: 'poppins', sans-serif;
+}
+
+.services {
+  display: flex;
+  max-width: 1200px;
+  overflow: hidden; /* Hide overflow content */
+  margin: 40px;
+  gap: 10px;
+  padding: 20px;
+  box-sizing: border-box;
+  width: 100%;
+}
+.services .service {
+  background: var(--white);
+  flex: 0 0 calc(100% / 3); /* Ensure each .service element takes up 30% of the container width */
+  min-height: 400px;
+  padding: 40px;
+  box-sizing: border-box; /* Include padding in the element's total width and height */
+  /* width: 100%; */
+}
+.services .service .icon i{
+  font-size: 4rem;
+  padding-bottom: 20px;
+  color: var(--background-color);
+}
+.services .service h1{
+  font-size: 30px;
+  display: inline;
+  text-transform: capitalize;
+  letter-spacing: 2px;
+  color: var(--background-color);
+}
