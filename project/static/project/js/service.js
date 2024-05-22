@@ -19,3 +19,11 @@ document.addEventListener('DOMContentLoaded', function() {
     menuIcon.style.display = 'flex';
   });
 });
+
+
+document.addEventListener("DOMContentLoaded", function() {
+  const services = document.querySelectorAll('.services .service');
+  services.forEach((service, index) => {
+    service.style.animationDelay = `${index * 0.5}s`; // Adjust delay as needed
+  });
+});

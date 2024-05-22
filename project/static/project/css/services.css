@@ -177,7 +177,7 @@
   justify-content: center;
   flex-direction: column;
   position: relative;
-  padding-top: 60px;
+  padding-top: 150px;
   margin-inline: auto;
 }
 .content .top-nav{
@@ -190,7 +190,7 @@
   color: var(--small-text-clor);
   font-size: 0.8rem;
   letter-spacing: 3px;
-  font-weight: 800;
+  font-weight: 600;
 }
 .content .top-nav .left h1{
   font-size: 3.5rem;
@@ -230,16 +230,61 @@
   padding: 40px;
   box-sizing: border-box; /* Include padding in the element's total width and height */
   /* width: 100%; */
+  opacity: 0; /* Ensure elements are initially hidden */
+  animation: fadeIn 1s ease-in-out forwards; /* Apply the animation */
 }
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px); /* Optional: adds a slight upward movement */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .services .service .icon i{
   font-size: 4rem;
   padding-bottom: 20px;
-  color: var(--background-color);
+  color: var(--eerie-black);
 }
 .services .service h1{
-  font-size: 30px;
+  font-size: 25px;
   display: inline;
   text-transform: capitalize;
   letter-spacing: 2px;
-  color: var(--background-color);
+  color: var(--eerie-black);
+  font-weight: 700;
+}
+.services .service p
+{
+  font-size: 1rem;
+  color: var(--small-text-clor);
+  margin-top: 30px;
+  letter-spacing: 2px;
+  line-height: 1.6;
+}
+.services .service span {
+  position: absolute;
+  bottom: 40px; /* Position the span at the bottom of the service box */
+  right: 30px; /* Position the span at the right side of the service box */
+  font-size: 3rem; /* Adjust the font size as needed */
+  color: var(--small-text-clor); /* Match the border color */
+  background: transparent; /* Transparent background */
+  font-weight: 900;
+}
+.content .navigate
+{
+  display: flex;
+  gap: 70px;
+  font-size: 1.5rem;
+  color: var(--small-text-clor);
+  transition: all 0.5s ease;
+}
+.content .navigate:hover,
+.content .navigate i:hover
+{
+  transform: scale(1.5);
 }
