@@ -47,6 +47,8 @@
     align-items: center;
     justify-content: space-between;
     /* opacity: 0.8; */
+  animation: fadeIn 0.5s ease-in-out forwards; /* Apply the animation */
+
 }
 .wrapper-section .navigation:active{
     background-color: var(--raisin-black);
@@ -180,10 +182,21 @@
   padding-top: 150px;
   margin-inline: auto;
 }
-.content .top-nav{
+.content .top-nav {
   display: flex;
   align-items: center;
-  gap: 40px;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px; /* Adjust to match the max-width of .services */
+  padding: 0 20px; /* Ensure the same padding as .services */
+  box-sizing: border-box;
+  opacity: 0; /* Initially hidden */
+  animation: fadeIn 1.5s ease-in-out forwards; /* Apply the animation */
+}
+
+.content .top-nav .left,
+.content .top-nav .right {
+  animation: fadeIn 1.5s ease-in-out forwards; /* Apply the animation */
 }
 .content .top-nav .left h3{
   text-transform: uppercase;
@@ -198,7 +211,7 @@
   letter-spacing: 2px;
   font-weight: 700;
   text-transform: capitalize;
-  padding-top: 20px;
+  margin-top: 10px;
 }
 .content .top-nav .right{
   max-width: 600px;
