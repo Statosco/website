@@ -236,17 +236,46 @@
   box-sizing: border-box;
   width: 100%;
 }
+@keyframes pushAnimation {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-10px);
+  }
+}
+
+@keyframes pushAnimationRight {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(10px);
+  }
+}
 .services .service {
   background: var(--white);
   flex: 0 0 calc(100% / 3); /* Ensure each .service element takes up 30% of the container width */
   min-height: 400px;
   padding: 40px;
-  box-sizing: border-box; /* Include padding in the element's total width and height */
-  /* width: 100%; */
+  box-sizing: border-box;
+  margin-right: 10px; /* Ensure consistent right margin */
   opacity: 0; /* Ensure elements are initially hidden */
   animation: fadeIn 1s ease-in-out forwards; /* Apply the animation */
+  transition: all 0.5s ease-in-out;
+}
+.services .service:hover {
+  background: var(--background-color);
+  color: var(--white);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
+.services .service:hover .icon i,
+.services .service:hover h1,
+.services .service:hover p,
+.services .service:hover span {
+  color: var(--white);
+}
 @keyframes fadeIn {
   from {
     opacity: 0;
