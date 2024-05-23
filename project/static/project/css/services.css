@@ -8,7 +8,8 @@
     text-decoration: none;
 }
 :root{
-    --eerie-black: hsla(228, 9%, 10%, 1);
+    --eerie-black: rgba(29, 31, 35, 0.92);
+    --eerie-black2: rgba(23, 24, 28, 0.913);
     --ff-syne: 'Syne', sans-serif;
     --white: hsla(0, 0%, 100%, 1);
     --blob-radius: 52% 48% 59% 41% / 53% 40% 60% 47%;
@@ -335,3 +336,70 @@
 /* </----------/> */
 
 
+.wrapper .feture
+{
+  background: var(--eerie-black2);
+  min-height: 100vh;
+  position: relative;
+}
+.wrapper .feture .container
+{
+  padding-top: 300px;
+  margin-inline: auto;
+  max-width: 1000px;
+}
+.wrapper .feture .container .title h2
+{
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--small-text-clor);
+  margin-bottom: 30px;
+}
+.wrapper .feture .container .title h1
+{
+  text-transform: capitalize;
+  font-size: 3rem;
+  letter-spacing: 2px;
+  color: var(--big-text-color);
+  margin-bottom: 50px;
+}
+.wrapper .feture .container .bottom
+{
+  display: flex;
+  justify-content: space-between;
+}
+.wrapper .feture .container .bottom .bottom-left
+{
+  width: 500px;
+}
+.wrapper .feture .container .bottom .bottom-left p
+{
+  font-size: 1.3rem;
+  color: var(--small-text-clor);
+  text-transform: capitalize;
+  line-height: 1.7;
+  margin-bottom: 30px;
+}
+.wrapper .feture .container .bottom .bottom-left span
+{
+  color: var(--white);
+  margin-top: 20px;
+  letter-spacing: 1px;
+  font-size: 1.2rem;
+
+  position: relative; /* Ensure the span is the reference for the absolute positioning */
+  padding-left: 20px; /* Adjust padding to make room for the circle */
+}
+
+.wrapper .feture .container .bottom .bottom-left span::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateY(-50%);
+  width: 50px; /* Adjust the size of the circle */
+  height: 50px; /* Adjust the size of the circle */
+  border: 1px solid var(--small-text-clor);
+  border-radius: 50%;
+}
