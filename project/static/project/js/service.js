@@ -18,50 +18,60 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 
-  // Services animation delay logic
-  const services = document.querySelectorAll('.services .service');
-  services.forEach((service, index) => {
-    service.style.animationDelay = `${index * 0.5}s`;
-  });
-
-  // Scroll services logic
+  // Services animation delay and scroll logic
   const servicesContainer = document.querySelector('.services');
   const leftArrow = document.querySelector('.fa-arrow-left');
   const rightArrow = document.querySelector('.fa-arrow-right');
+  const services = document.querySelectorAll('.services .service');
+  const serviceWidth = services[0].offsetWidth;
 
   if (servicesContainer && services.length > 0) {
-    const cardStyle = window.getComputedStyle(services[0]);
-    const cardWidth = services[0].offsetWidth + parseInt(cardStyle.marginRight);
-    let scrollPosition = 0;
+    const minAnimationDelay = 0.2; // Minimum animation delay in seconds
 
-    function scrollServices(direction) {
-      if (direction === 'left') {
-        if (scrollPosition > 0) {
-          scrollPosition -= cardWidth;
-        } else {
-          servicesContainer.style.animation = 'pushAnimation 0.3s ease';
-          setTimeout(() => {
-            servicesContainer.style.animation = '';
-          }, 300);
-        }
-      } else if (direction === 'right') {
-        if (scrollPosition < (services.length - 3) * cardWidth) { // 3 visible cards
-          scrollPosition += cardWidth;
-        } else {
-          servicesContainer.style.animation = 'pushAnimationRight 0.3s ease';
-          setTimeout(() => {
-            servicesContainer.style.animation = '';
-          }, 300);
-        }
-      }
-      servicesContainer.scrollTo({
-        left: scrollPosition,
-        behavior: 'smooth'
+    servicesContainer.addEventListener('scroll', () => {
+      services.forEach((service, index) => {
+        const scrollPosition = servicesContainer.scrollLeft;
+        const delay = Math.max(minAnimationDelay, (scrollPosition + (index * serviceWidth)) / (document.documentElement.clientWidth * 2));
+        service.style.animationDelay = `${delay}s`;
       });
-    }
+    });
 
-    leftArrow.addEventListener('click', () => scrollServices('left'));
-    rightArrow.addEventListener('click', () => scrollServices('right'));
+    const scrollStep = serviceWidth; // Scroll step in pixels (one service width)
+
+    leftArrow.addEventListener('click', function() {
+      if (servicesContainer.scrollLeft > 0) {
+        servicesContainer.scrollTo({
+          left: servicesContainer.scrollLeft - scrollStep,
+          behavior: 'smooth'
+        });
+      } else {
+        servicesContainer.style.animation = 'pushAnimation 0.3s ease';
+        setTimeout(() => {
+          servicesContainer.style.animation = '';
+        }, 300);
+      }
+    });
+
+    rightArrow.addEventListener('click', function() {
+      const maxScrollPosition = servicesContainer.scrollWidth - servicesContainer.clientWidth;
+      if (servicesContainer.scrollLeft < maxScrollPosition) {
+        servicesContainer.scrollTo({
+          left: servicesContainer.scrollLeft + scrollStep,
+          behavior: 'smooth'
+        });
+      } else {
+        servicesContainer.style.animation = 'pushAnimationRight 0.3s ease';
+        setTimeout(() => {
+          servicesContainer.style.animation = '';
+        }, 300);
+      }
+    });
+
+    // Ensure the container is initially positioned correctly
+    servicesContainer.scrollTo({
+      left: 0,
+      behavior: 'smooth'
+    });
   } else {
     console.error('Services container or services elements not found.');
   }
