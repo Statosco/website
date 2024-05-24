@@ -421,3 +421,53 @@
   left: calc(100% - 70px); /* Move the ::before element to the right */
 }
 
+.wrapper .feture .container .bottom .bottom-right .section
+{
+  margin-top: 60px;
+  display: flex;
+  gap: 300px;
+  color: var(--white);
+  font-size: 0.9rem;
+  margin-bottom: 60px;
+}
+
+.wrapper .feture .container .bottom .bottom-right .section::before
+{
+  content: "";
+  width: 370px;
+  height: 6px;
+  position: absolute;
+  background: var(--white);
+  border-radius: 20px;
+  margin-top: 30px;
+}
+.wrapper .feture .container .bottom .bottom-right .section::after
+{
+  content: "";
+  width: 400px;
+  height: 7px;
+  position: absolute;
+  background: var(--small-text-clor);
+  border-radius: 20px;
+  margin-top: 30px;
+  z-index: -1;
+}
+
+
+
+
+.wrapper .feture .container .bottom .bottom-right .section[data-percent="90%"]::before {
+  width: 350px;
+}
+.wrapper .feture .container .bottom .bottom-right .section[data-percent="70%"]::before {
+  width: 300px;
+}
+.wrapper .feture .container .bottom .bottom-right .section[data-percent="80%"]::before {
+  width: 330px;
+}
+.wrapper .feture .container .bottom .bottom-right .section[data-percent="85%"]::before {
+  width: 350px;
+}
+
+
+
