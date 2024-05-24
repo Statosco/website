@@ -419,6 +419,5 @@
 
 .wrapper .feture .container .bottom .bottom-left span.active::before {
   left: calc(100% - 70px); /* Move the ::before element to the right */
-  box-shadow: 2px 2px 10px var(--small-text-clor); /* Adjust shadow if needed */
 }
 
