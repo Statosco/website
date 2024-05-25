@@ -482,8 +482,7 @@
   }
   .wrapper-section .services
   {
-    margin: 0 20px 0 0;
-    margin-top: 30px;
+    margin: 30px 20px 0 0;
   }
 }
 @media(max-width: 1006px) {
@@ -510,6 +509,7 @@
   }
   .content .top-nav
   {
+    margin-top: 90px;
     flex-direction: column;
   }
   .wrapper .feture .container .bottom
@@ -519,9 +519,44 @@
 .wrapper .feture .container .bottom .bottom-left
 {
   width: 100%;
+  
+}
+.wrapper .feture .container .bottom .bottom-right
+{
+  margin-inline: auto;
+
+}
+
+}
+
+
+@media(max-width: 883px){
+  .wrapper-section .navigation {
+    flex-direction: row; /* Stack elements vertically */
+    gap: 40px;
+    justify-content: center;
+  }
+}
+@media(max-width: 737px){
+  .wrapper-section .navigation
+  {
+    flex-direction: column;
+  }
+  .wrapper-section .navigation .menu-icons .menu
+  {
+    position: absolute;
+    right: 20px;
+  }
+}
+@media(max-width: 651px){
+.services .service 
+  {
+  flex: 0 0 calc(100% / 1); /* Ensure each .service element takes up 30% of the container width */
+  }
+  body{
+    overflow-x: scroll;
+}
+.wrapper{
+    overflow: hidden;
 }
 }
-
-
-
-
