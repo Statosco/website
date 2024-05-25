@@ -76,31 +76,29 @@ document.addEventListener('DOMContentLoaded', function() {
     console.error('Services container or services elements not found.');
   }
 
+  // Code for moving the circle and box-shadow on span element
   const span = document.querySelector('.wrapper .feture .container .bottom .bottom-left span');
 
   // Create an overlay to simulate ::before click
   const beforeOverlay = document.createElement('div');
   beforeOverlay.style.position = 'absolute';
-  beforeOverlay.style.top = '50%'; // Center vertically
-  beforeOverlay.style.left = '10px'; // Match the initial position of ::before
+  beforeOverlay.style.top = '31px';
+  beforeOverlay.style.left = '0';
   beforeOverlay.style.transform = 'translateY(-50%)';
   beforeOverlay.style.width = '50px';
   beforeOverlay.style.height = '50px';
   beforeOverlay.style.zIndex = '2';
   beforeOverlay.style.cursor = 'pointer';
-  beforeOverlay.style.borderRadius = '50%';
-  beforeOverlay.style.opacity = '0'; // Make the overlay invisible
   span.appendChild(beforeOverlay);
 
-  // Adjust the overlay's position when active
-  function toggleActive() {
+  beforeOverlay.addEventListener('click', function() {
     span.classList.toggle('active');
     if (span.classList.contains('active')) {
-      beforeOverlay.style.left = 'calc(100% - 60px)';
+      beforeOverlay.style.left = 'calc(100% - 50px)'; // Move the circle to the right
+      span.style.boxShadow = '10px 10px 10px var(--eerie-black2)';
     } else {
-      beforeOverlay.style.left = '10px';
+      beforeOverlay.style.left = '0'; // Move the circle back to the left
+      span.style.boxShadow = '2px 2px 10px var(--eerie-black2)';
     }
-  }
-
-  beforeOverlay.addEventListener('click', toggleActive);
+  });
 });
