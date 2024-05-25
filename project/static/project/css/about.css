@@ -495,7 +495,7 @@ font-size: 1.3em;
         padding-left: 30px;
 
     }
-    
+
 }
 @media screen and (max-width: 679px){
 
@@ -505,6 +505,21 @@ font-size: 1.3em;
     .wrapper{
         overflow: hidden;
     }
+    .wrapper .about-me .about-me-section .about-me-content p
+{
+    font-size: 1rem;
+    font-weight: 400;
+}
+.wrapper .about-me{
+    padding: 20px;
+
+}
+.wrapper .about-me .about-me-section .about-me-content .p1
+.wrapper .about-me .about-me-section .about-me-content .p2
+.wrapper .about-me .about-me-section .about-me-content .p3
+{
+    padding: 10px;
+}
 }
 ::-webkit-scrollbar { width: 5px; }
 
