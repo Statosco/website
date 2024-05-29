@@ -578,4 +578,7 @@ body
     justify-content: center;
     align-items: center;
 }
-  
+.wrapper .box
+{
+  background: linear-gradient(90deg, #962d2d, #8a2be2, #da70d6);
+}
