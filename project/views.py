@@ -13,9 +13,15 @@ def about(response):
 # views.py
 from django.shortcuts import render, redirect
 from django.core.mail import EmailMessage
-from django.conf import settings
 from django.template.loader import render_to_string
-from .forms import ContactForm
+from django.conf import settings
+from django import forms
+
+class ContactForm(forms.Form):
+    full_name = forms.CharField(max_length=100)
+    city = forms.CharField(max_length=100)
+    email = forms.EmailField()
+    description = forms.CharField(widget=forms.Textarea)
 
 def services(request):
     if request.method == 'POST':
@@ -23,24 +29,25 @@ def services(request):
         if form.is_valid():
             full_name = form.cleaned_data['full_name']
             city = form.cleaned_data['city']
-            user_email = form.cleaned_data['email']  # User's email address
+            user_email = form.cleaned_data['email']
             description = form.cleaned_data['description']
 
-            template = render_to_string('project/talk.html', {
+            template = render_to_string('project/talk.txt', {
                 'full_name': full_name,
                 'city': city,
+                'user_email': user_email,
                 'description': description
             })
 
             email = EmailMessage(
-                'New Contact Form Submission',  # Subject of the email
-                template,  # Body of the email, rendered from the template
+                'New Contact Form Submission',
+                template,
                 user_email,  # From email (user's email address)
-                ['your_email@example.com'],  # To email, replace with your email address
+                ['siteforlio@gmail.com'],  # To email (your email address)
             )
             email.send()
 
-            return redirect('success_url')  # Replace with your success URL or message
+            return redirect('home')  # Replace with your success URL or message
     else:
         form = ContactForm()
 

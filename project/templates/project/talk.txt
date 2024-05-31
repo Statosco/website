@@ -1,0 +1,6 @@
+Contact Form Submission
+
+Full Name: {{ full_name }}
+City: {{ city }}
+Email: {{ user_email }}
+Description: {{ description }}
