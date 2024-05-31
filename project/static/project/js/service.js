@@ -101,4 +101,19 @@ document.addEventListener('DOMContentLoaded', function() {
       span.style.boxShadow = '2px 2px 10px var(--eerie-black2)';
     }
   });
+
+
+
+
+  const hideFormButton = document.getElementById("hideFormButton");
+  const formContent = document.querySelector('.form-content');
+
+  hideFormButton.addEventListener("click", function() {
+    formContent.style.opacity = '0';
+    setTimeout(function() {
+      formContent.style.display = 'none';
+    }, 5000); // Adjust the duration to match your CSS transition duration
+  });
 });
+
+
