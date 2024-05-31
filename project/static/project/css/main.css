@@ -1671,11 +1671,11 @@ a button span:hover{
     .content .nav button
     {
         position: relative;
-        right: -160px;
+        right: -260px;
         top: 30px;
     }
     .showcase-1 .name{
-        width: 600px;
+        max-width: 600px;
       }
       .showcase-1 .name img{
         transform: scale(1.3);
@@ -1688,7 +1688,7 @@ a button span:hover{
     font-size: 15px;
   }
     .showcase-1 .name .name-left .ani::after{
-    height: 28px;
+    min-height: 28px;
     }
     .showcase-1 .name h1 a{
         font-size: 30px;
