@@ -1667,6 +1667,13 @@ a button span:hover{
         margin-top: 1px;
         height: 100%;
     }
+
+    .content .nav button
+    {
+        position: relative;
+        right: -160px;
+        top: 30px;
+    }
     .showcase-1 .name{
         width: 600px;
       }
