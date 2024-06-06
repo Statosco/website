@@ -1,21 +1,20 @@
-{%load static%}
+{% load static %}
 
-    <link rel="stylesheet" href="{% static 'project/css/image-circle.css' %}">
+<link rel="stylesheet" href="{% static 'project/css/image-circle.css' %}">
 
-    <div class="box">
-        <span style="--i:1"><img src="{%static 'project/images/image.png'%}"></span>
-        <span style="--i:2"><img src="{%static 'project/images/image2.png'%}"></span>
-        <span style="--i:3"><img src="{%static 'project/images/image3.png'%}" alt=""></span>
-        <span style="--i:4"><img src="{%static 'project/images/image7.jpg'%}" alt=""></span>
-        <span style="--i:5"><img src="{%static 'project/images/image4.png'%}" alt=""></span>
-        <span style="--i:6"><img src="{%static 'project/images/image5.png'%}" alt=""></span>
-        <span style="--i:7"><img src="{%static 'project/images/image6.jpg'%}" alt=""></span>
-        <span style="--i:8"><img src="{%static 'project/images/ai.png'%}" alt=""></span>
-    </div>
-    <script type="text/javascript">
-        let box = document.querySelector('.box');
-        window.onmousemove = function(e){
-            let x = e.clientX/3;
-            box.style.transform = 'perspective(1000px) rotateY(' + x +'deg)'
-        }
-    </script>
+<script src="{%static 'project/js/service.js'%}" defer></script>
+
+
+
+<div class="box">
+    <span style="--i:1"><img src="{% static 'project/images/image.png' %}"></span>
+    <span style="--i:2"><img src="{% static 'project/images/image2.png' %}"></span>
+    <span style="--i:3"><img src="{% static 'project/images/image3.png' %}" alt=""></span>
+    <span style="--i:4"><img src="{% static 'project/images/image7.jpg' %}" alt=""></span>
+    <span style="--i:5"><img src="{% static 'project/images/image4.png' %}" alt=""></span>
+    <span style="--i:6"><img src="{% static 'project/images/image5.png' %}" alt=""></span>
+    <span style="--i:7"><img src="{% static 'project/images/image6.jpg' %}" alt=""></span>
+    <span style="--i:8"><img src="{% static 'project/images/ai.png' %}" alt=""></span>
+</div>
+
+

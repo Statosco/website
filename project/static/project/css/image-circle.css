@@ -1,12 +1,34 @@
+.wrapper .item {
+    min-height: 100vh;
+    background: var(--background-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-.box{
+.wrapper .box {
+    background: linear-gradient(90deg, #962d2d, #8a2be2, #da70d6);
+}
+
+.box {
     position: relative;
     width: 200px;
     height: 200px;
     transform-style: preserve-3d;
     transform: perspective(1000px) rotateY(0deg);
+    animation: rotate 20s infinite linear;
 }
-.box span{
+
+@keyframes rotate {
+    from {
+        transform: perspective(1000px) rotateY(0deg);
+    }
+    to {
+        transform: perspective(1000px) rotateY(360deg);
+    }
+}
+
+.box span {
     position: absolute;
     top: 0;
     left: 0;
@@ -14,10 +36,11 @@
     height: 100%;
     transform-origin: center;
     transform-style: preserve-3d;
-    transform: rotateY(calc(var(--i)*45deg)) translateZ(400px);
-    -webkit-box-reflect: below 0px linear-gradient(transparent,transparent,#000004);
+    transform: rotateY(calc(var(--i) * 45deg)) translateZ(400px);
+    -webkit-box-reflect: below 0px linear-gradient(transparent, transparent, #000004);
 }
-.box span img{
+
+.box span img {
     position: absolute;
     top: 0;
     left: 0;

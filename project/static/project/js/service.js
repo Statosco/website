@@ -126,3 +126,41 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
+
+
+let box = document.querySelector('.box');
+        let isRotating = true;
+
+        box.addEventListener('mouseenter', function() {
+            if (isRotating) {
+                box.style.animationPlayState = 'paused';
+                window.addEventListener('mousemove', rotateBox);
+            }
+        });
+
+        box.addEventListener('mouseleave', function() {
+            if (isRotating) {
+                box.style.animationPlayState = 'running';
+                window.removeEventListener('mousemove', rotateBox);
+                box.style.transform = 'perspective(1000px) rotateY(0deg)'; // Reset rotation on mouse leave
+            }
+        });
+
+        box.querySelectorAll('img').forEach((img, index) => {
+            img.addEventListener('click', function() {
+                isRotating = !isRotating;
+                if (isRotating) {
+                    box.style.animation = 'rotate 10s infinite linear';
+                } else {
+                    box.style.animation = 'none';
+                    let rotationAngle = index * 45; // Assuming there are 8 images, 360 / 8 = 45 degrees per image
+                    box.style.transform = `perspective(1000px) rotateY(-${rotationAngle}deg)`; // Rotate to the clicked image
+                    window.removeEventListener('mousemove', rotateBox);
+                }
+            });
+        });
+
+        function rotateBox(e) {
+            let x = (e.clientX - box.getBoundingClientRect().left) / box.offsetWidth * 2 - 1; // Normalize x to range [-1, 1]
+            box.style.transform = 'perspective(1000px) rotateY(' + (x * 15) + 'deg)'; // Adjust rotation scale as needed
+        }
