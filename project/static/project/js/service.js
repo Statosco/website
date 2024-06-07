@@ -102,9 +102,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 
-
-
-
   const showFormButton = document.getElementById("showFormButton");
   const hideFormButton = document.getElementById("hideFormButton");
   const formContent = document.querySelector('.form-content');
@@ -123,7 +120,46 @@ document.addEventListener('DOMContentLoaded', function() {
       formContent.classList.remove('fade-in');  // Reset fade-in class in case it's still present
     }, 500); // Adjust the duration to match your CSS transition duration
   });
+
+  // Select all images and content divs
+  const images = document.querySelectorAll('.box img');
+  const contents = document.querySelectorAll('.page-contents .contents');
+
+  // Check if images and contents are found
+  if (images.length === 0) {
+    console.error("No images found in the .box element.");
+  }
+
+  if (contents.length === 0) {
+    console.error("No contents found in the .page-contents element.");
+  }
+
+  // Add click event listener to each image
+  images.forEach(img => {
+    img.addEventListener('click', function() {
+      const target = this.getAttribute('data-target');
+      console.log(`Image with data-target="${target}" clicked.`); // Debug statement
+
+      let targetFound = false;
+
+      // Loop through contents to show/hide based on target
+      contents.forEach(content => {
+        if (content.id === target) {
+          content.style.display = 'flex'; // Show the targeted content
+          targetFound = true;
+          console.log(`Displaying content with id="${target}".`); // Debug statement
+        } else {
+          content.style.display = 'none'; // Hide all other contents
+        }
+      });
+
+      // If no content found for the target, log an error
+      if (!targetFound) {
+        console.error(`No content found with id="${target}".`);
+      }
+    });
+  });
+
+
+ 
 });
-
-
-

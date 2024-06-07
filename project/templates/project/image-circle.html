@@ -1,20 +1,14 @@
 {% load static %}
-
 <link rel="stylesheet" href="{% static 'project/css/image-circle.css' %}">
-
-<script src="{%static 'project/js/service.js'%}" defer></script>
-
-
+<script src="{% static 'project/js/service.js' %}" defer></script>
 
 <div class="box">
-    <span style="--i:1"><img src="{% static 'project/images/image.png' %}"></span>
-    <span style="--i:2"><img src="{% static 'project/images/image2.png' %}"></span>
-    <span style="--i:3"><img src="{% static 'project/images/image3.png' %}" alt=""></span>
-    <span style="--i:4"><img src="{% static 'project/images/image7.jpg' %}" alt=""></span>
-    <span style="--i:5"><img src="{% static 'project/images/image4.png' %}" alt=""></span>
-    <span style="--i:6"><img src="{% static 'project/images/image5.png' %}" alt=""></span>
-    <span style="--i:7"><img src="{% static 'project/images/image6.jpg' %}" alt=""></span>
-    <span style="--i:8"><img src="{% static 'project/images/ai.png' %}" alt=""></span>
+  <span style="--i:1"><img src="{% static 'project/images/image.png' %}" data-target="one"></span>
+  <span style="--i:2"><img src="{% static 'project/images/image2.png' %}" data-target="two"></span>
+  <span style="--i:3"><img src="{% static 'project/images/image3.png' %}" data-target="three"></span>
+  <span style="--i:4"><img src="{% static 'project/images/image7.jpg' %}" data-target="four"></span>
+  <span style="--i:5"><img src="{% static 'project/images/image4.png' %}" data-target="five"></span>
+  <span style="--i:6"><img src="{% static 'project/images/image5.png' %}" data-target="six"></span>
+  <span style="--i:7"><img src="{% static 'project/images/image6.jpg' %}" data-target="seven"></span>
+  <span style="--i:8"><img src="{% static 'project/images/ai.png' %}" data-target="eight"></span>
 </div>
-
-
