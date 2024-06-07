@@ -7,7 +7,7 @@
 }
 
 .wrapper .box {
-    background: linear-gradient(90deg, #962d2d, #8a2be2, #da70d6);
+    background: rgba(0, 0, 0, 0.4);
 }
 
 .box {
