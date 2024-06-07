@@ -465,14 +465,14 @@ body
 .wrapper .feture .container .bottom .bottom-right .section[data-percent="90%"]::before {
   width: 350px;
 }
-.wrapper .feture .container .bottom .bottom-right .section[data-percent="70%"]::before {
-  width: 300px;
+.wrapper .feture .container .bottom .bottom-right .section[data-percent="90%"]::before {
+  width: 350px;
 }
 .wrapper .feture .container .bottom .bottom-right .section[data-percent="80%"]::before {
-  width: 330px;
+  width: 300px;
 }
 .wrapper .feture .container .bottom .bottom-right .section[data-percent="85%"]::before {
-  width: 350px;
+  width: 330px;
 }
 
 
@@ -609,4 +609,48 @@ body
 .wrapper .box
 {
   background: linear-gradient(90deg, #962d2d, #8a2be2, #da70d6);
+}
+.wrapper .projects .info
+{
+
+  padding: 50px;
+}
+
+.wrapper .projects .info h1
+{
+  text-transform: capitalize;
+  letter-spacing: 2px;
+  color: var(--big-text-color);
+  margin-bottom: 40px;
+}
+.wrapper .projects .info span
+{
+  color: var(--small-text-clor);
+  background: var(--background-color);
+  box-shadow: 5px 1px 10px var(--eerie-black2);
+  border-radius: 7px;
+  padding: 15px;
+  letter-spacing: 1px;
+  transition: all 0.5s ease-out;
+  display: none;
+  opacity: 0; /* start with opacity 0 */
+  transform: translateY(10px); /* start with a slight downward position */
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out; /* apply transition for both opacity and transform */
+  display: inline-block; /* ensure span occupies space even when invisible */
+}
+.wrapper .projects:hover .info span
+{
+  display: inline-block;
+  transform: translateY(0);
+  animation: float 3s ease-in-out infinite;
+  opacity: 1;
+}
+
+@keyframes float {
+  0%, 100% {
+      transform: translateY(0);
+  }
+  50% {
+      transform: translateY(-20px);
+  }
 }
