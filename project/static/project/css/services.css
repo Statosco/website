@@ -601,7 +601,6 @@ body
 }
 .wrapper .item
 {
-    
     display: flex;
     justify-content: center;
     align-items: center;
@@ -656,10 +655,9 @@ body
 
 .wrapper .projects .page-contents
 {
-  min-height: 100vh;
+  min-height: 50vh;
   position: absolute;
   z-index: 16;
-  background: rgba(0, 0, 0, 0.2);
   bottom: 0px;
 width: 100%;
 display: flex;
@@ -700,7 +698,7 @@ display: none;
 }
 .wrapper .projects .page-contents .contents
 {
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.8);
   position: absolute;
 }
 .wrapper .projects .page-contents .contents .span
@@ -726,4 +724,14 @@ display: none;
   vertical-align: middle; /* Ensures vertical alignment */
   color: var(--small-text-clor);
   font-size: 30px;
+}
+
+.contents.show {
+    display: block;
+    opacity: 1;
+}
+
+.contents.hide {
+    opacity: 0;
+    transition: opacity 0.4s;
 }

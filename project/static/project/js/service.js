@@ -121,45 +121,90 @@ document.addEventListener('DOMContentLoaded', function() {
     }, 500); // Adjust the duration to match your CSS transition duration
   });
 
-  // Select all images and content divs
-  const images = document.querySelectorAll('.box img');
-  const contents = document.querySelectorAll('.page-contents .contents');
+  
 
-  // Check if images and contents are found
-  if (images.length === 0) {
-    console.error("No images found in the .box element.");
-  }
+// Select all images and content divs
+const images = document.querySelectorAll('.box img');
+const contents = document.querySelectorAll('.page-contents .contents');
+const pageContents = document.querySelector('.page-contents');
 
-  if (contents.length === 0) {
-    console.error("No contents found in the .page-contents element.");
-  }
+// Check if images and contents are found
+if (images.length === 0) {
+  console.error("No images found in the .box element.");
+}
 
-  // Add click event listener to each image
-  images.forEach(img => {
-    img.addEventListener('click', function() {
-      const target = this.getAttribute('data-target');
-      console.log(`Image with data-target="${target}" clicked.`); // Debug statement
+if (contents.length === 0) {
+  console.error("No contents found in the .page-contents element.");
+}
 
-      let targetFound = false;
+// Function to hide all contents
+function hideAllContents() {
+  contents.forEach(content => {
+    content.classList.remove('show');
+    content.classList.add('hide');
+    setTimeout(() => {
+      content.style.display = 'none';
+    }, 500); // Match this timeout to the CSS transition duration
+  });
+  pageContents.style.display = 'none';
+}
 
-      // Loop through contents to show/hide based on target
-      contents.forEach(content => {
-        if (content.id === target) {
-          content.style.display = 'flex'; // Show the targeted content
-          targetFound = true;
-          console.log(`Displaying content with id="${target}".`); // Debug statement
-        } else {
-          content.style.display = 'none'; // Hide all other contents
-        }
-      });
+// Function to show content
+function showContent(target) {
+  let targetFound = false;
 
-      // If no content found for the target, log an error
-      if (!targetFound) {
-        console.error(`No content found with id="${target}".`);
+  // Loop through contents to show/hide based on target
+  contents.forEach(content => {
+    if (content.id === target) {
+      content.style.display = 'block'; // Ensure it's displayed before the opacity transition
+      setTimeout(() => {
+        content.classList.remove('hide');
+        content.classList.add('show');
+      }, 10); // Small delay to trigger the CSS transition
+      targetFound = true;
+      console.log(`Displaying content with id="${target}".`); // Debug statement
+    } else {
+      if (content.classList.contains('show')) {
+        content.classList.remove('show');
+        content.classList.add('hide');
+        setTimeout(() => {
+          content.style.display = 'none'; // Ensure the content is hidden after fade-out
+        }, 500); // Match this timeout to the CSS transition duration
       }
-    });
+    }
   });
 
+  // Show the .page-contents element if target found
+  if (targetFound) {
+    pageContents.style.display = 'flex';
+  } else {
+    console.error(`No content found with id="${target}".`);
+  }
+}
 
- 
+// Add click and touch event listeners to each image
+images.forEach(img => {
+  img.addEventListener('click', function() {
+    const target = this.getAttribute('data-target');
+    console.log(`Image with data-target="${target}" clicked.`); // Debug statement
+    showContent(target);
+  });
+
+  // For mobile touch events
+  img.addEventListener('touchend', function() {
+    const target = this.getAttribute('data-target');
+    console.log(`Image with data-target="${target}" touched.`); // Debug statement
+    showContent(target);
+  });
 });
+
+// Add scroll event listener to hide contents when scrolling
+window.addEventListener('scroll', hideAllContents);
+
+
+
+
+
+});
+
+
