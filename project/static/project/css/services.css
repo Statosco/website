@@ -735,3 +735,17 @@ display: none;
     opacity: 0;
     transition: opacity 0.4s;
 }
+
+
+
+@media(max-width: 777px){
+.wrapper .projects .page-contents .contents .titles
+    {
+      flex-direction: column;
+      gap: 2rem;
+    }
+.wrapper .projects .page-contents .contents .span-container
+    {
+      margin-inline: auto;
+    }
+}
