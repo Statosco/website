@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+.content{
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    background-image: url(chair1.jpg);
+    background-size: cover;
+}
+.content .contacts {
+    display: flex;
+    /* flex-direction: column; */
+    align-items: center;
+    justify-content: center;
+    background: #eaa93948;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.9);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 250px;
+    border-radius: 3px;
+}
+.content::before{
+    content: "";
+    height: 100%;
+    width: 100%;
+    background: #333;
+    position: absolute;
+    opacity: 0.5;
+}
+.content .contacts .title{
+    position: absolute;
+    left: 30px;
+    color: #fff;
+    font-size: 30px;
+}
+.content .contacts .line {
+    position: absolute;
+    top: 50%;
+    height: 2px;
+    width: 100%;
+    background-color: #fff; /* Adjust the color of the line */
+    transform: translatey(-50%);
+    transform: rotate(90deg);
+}
+
+.content .contacts .socials{
+    position: absolute;
+    right: 30px;
+}
+.content .contacts .socials i{
+    /* color: #fff; */
+    font-size: 25px;
+    background: #fff;
+    border-radius: 50%;
+    padding: 10px;
+}
+.content .contacts .socials a:nth-child(1) i {
+    color: #1877F2;
+}
+
+.content .contacts .socials a:nth-child(2) i {
+    color: #0077b5;
+}
+.content .contacts .socials a:nth-child(3) i {
+    color: #126567;
+}
+.content .contacts .socials a:nth-child(4) i {
+    color: #2b3137;
+}
+.content .contacts .socials a:nth-child(5) i {
+    color: #da13e1 ;
+}
