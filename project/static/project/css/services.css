@@ -335,7 +335,8 @@ body
 .content .navigate:hover,
 .content .navigate i:hover
 {
-  transform: scale(1.5);
+  transform: scale(1.1);
+  cursor: pointer;
 }
 
 
@@ -932,23 +933,49 @@ display: none;
 {
   text-align: end;
 }
-.hero-para
-{
+.hero-para {
   position: absolute;
-  z-index: 3;
-  width: 110%;
-  border: 5px solid red;
+  z-index: 1;
+  width: 110%; /* Adjust width to fit your design */
+  display: none;
 }
-.hero-para p
-{
+
+.hero-para p::before,
+.hero-para p::after {
+  content: '';
+  position: absolute;
+  border: 7px solid var(--background-color); /* Adjust color and size as needed */
+  z-index: 3; /* Ensure the borders are behind the paragraph text */
+  width: calc(100% - 100px); /* Adjust width to fit inside padding */
+  height: calc(100% - 290px); /* Adjust height to fit inside padding */
+  border-radius: 9px;
+}
+.hero-para p {
   border-radius: 9px;
   background: var(--eerie-black2);
-color: var(--small-text-clor);
-padding: 70px;
-line-height: 2;
-letter-spacing: 3px;
-text-transform: capitalize;
-font-weight: 700;
+  color: var(--small-text-clor);
+  padding: 40px;
+  line-height: 2;
+  letter-spacing: 3px;
+  text-transform: capitalize;
+  font-weight: 700;
+  position: relative;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.77);
 }
+
+.hero-para p::before {
+  top: 0;
+  left: 0;
+  border-bottom: none;
+  border-right: none;
+}
+
+.hero-para p::after {
+  bottom: 0;
+  right: 0;
+  border-top: none;
+  border-left: none;
+}
+
 
 
