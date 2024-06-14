@@ -815,7 +815,7 @@ display: none;
   width: 100%;
   gap: 50px;
   justify-content: center;
-  margin-bottom: 150px;
+  margin-bottom: 100px;
   flex-direction: row;
   position: relative;
 }
@@ -890,6 +890,11 @@ display: none;
   gap: 50px;
   
 }
+.hero-section .hero-part .hero-info .hero-content .hero-btn a
+{
+  color: var(--white);
+}
+
 .hero-section .hero-part .hero-info .hero-content .hero-btn h3
 {
   letter-spacing: 2px;
@@ -937,7 +942,7 @@ display: none;
   position: absolute;
   z-index: 1;
   width: 110%; /* Adjust width to fit your design */
-  display: none;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 
 .hero-para p::before,
@@ -962,7 +967,26 @@ display: none;
   position: relative;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.77);
 }
+.hero-para.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
 
+.hero-para i
+{
+  font-size: 2.5rem;
+  color: var(--white);
+  position: absolute;
+  z-index: 4;
+  right: -15px;
+  top: -20px;
+  opacity: 0.3;
+  cursor: pointer;
+}
+.hero-para i:active
+{
+  transform: scale(0.9);
+}
 .hero-para p::before {
   top: 0;
   left: 0;
@@ -976,6 +1000,33 @@ display: none;
   border-top: none;
   border-left: none;
 }
+hr
+{
+  margin-bottom: 80px;
+  width: 100px;
+  margin-inline: auto;
+  box-shadow: 10px 10px 10px;
+  animation: wobblyExpandRetract 28s infinite;
+}
 
 
-
+@keyframes wobblyExpandRetract {
+  0% {
+    width: 100px;
+  }
+  20% {
+    width: 50%;
+  }
+  40% {
+    width: 100%;
+  }
+  60% {
+    width: 75%;
+  }
+  80% {
+    width: 100%;
+  }
+  100% {
+    width: 100px;
+  }
+}

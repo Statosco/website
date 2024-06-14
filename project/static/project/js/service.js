@@ -205,6 +205,32 @@ window.addEventListener('scroll', hideAllContents);
 
 
 
+const readMoreBtn1 = document.getElementById("read-more-1");
+const heroPara1 = document.getElementById("hero-para-1");
+const closeBtn1 = heroPara1.querySelector(".close");
+
+readMoreBtn1.addEventListener("click", function() {
+  heroPara1.classList.remove("hidden");
+});
+
+closeBtn1.addEventListener("click", function() {
+  heroPara1.classList.add("hidden");
+});
+
+const readMoreBtn2 = document.getElementById("read-more-2");
+const heroPara2 = document.getElementById("hero-para-2");
+const closeBtn2 = heroPara2.querySelector(".close");
+
+readMoreBtn2.addEventListener("click", function() {
+  heroPara2.classList.remove("hidden");
+});
+
+closeBtn2.addEventListener("click", function() {
+  heroPara2.classList.add("hidden");
+});
+
+
+
 });
 
 
