@@ -826,7 +826,7 @@ display: none;
   width: 450px;
   box-shadow: 1px 0 19px;
   animation: flow 6s ease-in-out infinite;
-
+  object-fit: cover;
   cursor: pointer;
 }
 .hero-section .hero-part .hero-flex-content img:hover
