@@ -764,10 +764,8 @@ display: none;
 }
 .hero-section .hero-part
 {
-  padding: 200px;
-
-  /* margin-inline: auto; */
-
+  padding: 200px 200px  100px 200px;
+  
 }
 .hero-section .hero-part .lingua
 {
@@ -829,10 +827,7 @@ display: none;
   object-fit: cover;
   cursor: pointer;
 }
-.hero-section .hero-part .hero-flex-content img:hover
-{
-  animation: none;
-}
+
 
 @keyframes flow {
   0%, 100% {
