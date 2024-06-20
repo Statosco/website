@@ -1,14 +1,30 @@
 {% load static %}
-<link rel="stylesheet" href="{% static 'project/css/image-circle.css' %}">
-<script src="{% static 'project/js/service.js' %}" defer></script>
-
-<div class="box">
-  <span style="--i:1"><img src="{% static 'project/images/image.png' %}" data-target="one"></span>
-  <span style="--i:2"><img src="{% static 'project/images/image2.png' %}" data-target="two"></span>
-  <span style="--i:3"><img src="{% static 'project/images/image3.png' %}" data-target="three"></span>
-  <span style="--i:4"><img src="{% static 'project/images/image7.jpg' %}" data-target="four"></span>
-  <span style="--i:5"><img src="{% static 'project/images/image4.png' %}" data-target="five"></span>
-  <span style="--i:6"><img src="{% static 'project/images/image5.png' %}" data-target="six"></span>
-  <span style="--i:7"><img src="{% static 'project/images/image6.jpg' %}" data-target="seven"></span>
-  <span style="--i:8"><img src="{% static 'project/images/ai.png' %}" data-target="eight"></span>
-</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'project/css/image-circle.css' %}">
+    <script src="{% static 'project/js/service.js' %}" defer></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="carousel">
+        <div class="carousel-control-button left"><input type="radio" name="carousel-control-input"></div>
+        <div class="carousel-control-button right"><input type="radio" name="carousel-control-input" checked></div>
+        <div class="carousel-rotation-direction">
+            <ul class="carousel-item-wrapper" style="--_num-elements: 8">
+                <li class="carousel-item" style="--_index: 1; --_image-url: url('{% static 'project/images/image.png' %}')"><a href="#htcs"  data-target="one">Image 1</a></li>
+                <li class="carousel-item" style="--_index: 2; --_image-url: url('{% static 'project/images/image2.png' %}')"><a href="#frontend"  data-target="two">Image 2</a></li>
+                <li class="carousel-item" style="--_index: 3; --_image-url: url('{% static 'project/images/image3.png' %}')"><a href="#python"  data-target="three">Image 3</a></li>
+                <li class="carousel-item" style="--_index: 4; --_image-url: url('{% static 'project/images/image7.jpg' %}')"><a href="#3d"  data-target="four">Image 4</a></li>
+                <li class="carousel-item" style="--_index: 5; --_image-url: url('{% static 'project/images/image4.png' %}')"><a href="#react"  data-target="five">Image 5</a></li>
+                <li class="carousel-item" style="--_index: 6; --_image-url: url('{% static 'project/images/image5.png' %}')"><a href="#backend"  data-target="six">Image 6</a></li>
+                <li class="carousel-item" style="--_index: 7; --_image-url: url('{% static 'project/images/image6.jpg' %}')"><a href="#cpp"  data-target="seven">Image 7</a></li>
+                <li class="carousel-item" style="--_index: 8; --_image-url: url('{% static 'project/images/ai.png' %}')"><a href="#js" data-target="eight">Image 8</a></li>
+                <li class="carousel-ground"></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

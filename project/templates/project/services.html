@@ -210,81 +210,6 @@
           <div class="item">
           {% include 'project/image-circle.html' %}
           </div>
-          <div class="page-contents">
-            <div class="contents" id="one">
-              <h1>HTML5 & CSS</h1>
-              <div class="titles">
-                <p>My experience with HTML/CSS is vast and strong, built upon procedural learning that tends to increase familiarity. I have learned by developing over 50+ templates, incorporating key concepts that lead the industry, like animation, Sass/SCSS, the mighty Flexbox, web responsiveness, and many more. Actually, you can see this in action as you begin from the homepage, which may not have a lot of these key concepts, to my service page, which has them all embedded in detail.</p>              
-                <div class="span-container">
-                <span class="span">learn more <i class='bx bx-left-down-arrow-circle'></i></span>
-              </div>
-              </div>              
-            </div>
-            <div class="contents" id="two">
-              <h1>front-end development</h1>
-              <div class="titles">
-                <p>When it comes to front-end integration, my projects speak for themselves. From a coffee website to a shoe store to a music store, I'm confident that I can deliver robust, unique, and eye-catching front-end solutions that will meet your corporate needs.</p>              
-                <div class="span-container">
-                <span class="span">learn more <i class='bx bx-left-down-arrow-circle'></i></span>
-              </div>
-              </div>              
-            </div>
-            <div class="contents" id="eight">
-              <h1>JavaScript development</h1>
-              <div class="titles">
-                <p>A wise developer once said, "You don't know programming if you don't know JavaScript." That programmer was me. Over the years, as much as I have tried to avoid this language, I have had to use it in scenarios where no other language matches its capability. I have developed over 10 solid projects with JavaScript. These include a real-time weather app, an image generator with OpenAI's API, a Pac-Man game, and many more. I'm looking forward to extending my knowledge of JS.</p>              
-                <div class="span-container">
-                <span class="span">learn more <i class='bx bx-left-down-arrow-circle'></i></span>
-              </div>
-              </div>              
-            </div>
-            <div class="contents" id="five">
-              <h1>react development</h1>
-              <div class="titles">
-                <p>An industry quote suggests, "React JS is a developer's best friend." I can't argue more. Though I haven't mastered this mystical art completely, my endeavors have had some great success. I've developed three key React projects, including a fully functional YouTube clone, a blog website, and a notes app.</p>              
-                <div class="span-container">
-                <span class="span">learn more <i class='bx bx-left-down-arrow-circle'></i></span>
-              </div>
-              </div>              
-            </div>
-            <div class="contents" id="three">
-              <h1>python development</h1>
-              <div class="titles">
-                <p>Python, by far, is my favorite language. Having acquired a diploma in Python from Alison, I can't outline my entire vast portfolio without my computer running out of ink. I have developed Python solutions for AI & machine learning, algorithmic trading strategies, web development and APIs, web scraping, web hacking, and so on. I don't consider myself a wizard, but I can enchant you with my Python spells.</p>              
-                <div class="span-container">
-                <span class="span">learn more <i class='bx bx-left-down-arrow-circle'></i></span>
-              </div>
-              </div>              
-            </div>
-            <div class="contents" id="four">
-              <h1>3d with blender</h1>
-              <div class="titles">
-                <p>While I don't have enough knowledge to call myself a 3D enthusiast, I have the passion to work with empty models 😂 with only a doughnut to speak of from my experience.</p>              
-                <div class="span-container">
-                <span class="span">learn more <i class='bx bx-left-down-arrow-circle'></i></span>
-              </div>
-              </div>              
-            </div>
-            <div class="contents" id="six">
-              <h1>full-stack projects</h1>
-              <div class="titles">
-                <p>With a solid portfolio that includes my personal portfolio website and a full-stack web application that allows collaborative learning, I have developed backend solutions, APIs, and databases with SQL using Python's Django framework. I understand key concepts such as Django forms, Django ORM, views, URLs, and static files. I have also built RESTful APIs with Django's REST framework.</p>
-              <div class="span-container">
-                <span class="span">learn more <i class='bx bx-left-down-arrow-circle'></i></span>
-              </div>
-              </div>              
-            </div>
-            <div class="contents" id="seven">
-              <h1>c++ projects</h1>
-              <div class="titles">
-                <p>My portfolio includes a supermarket billing project developed using C++. This project showcases my understanding of object-oriented programming, data structures, and algorithms. I designed and implemented features such as item management, billing calculations, and receipt generation. Through this project, I demonstrated my ability to create efficient and functional solutions with C++.</p>
-              <div class="span-container">
-                <span class="span">learn more <i class='bx bx-left-down-arrow-circle'></i></span>
-              </div>
-              </div>              
-            </div>
-           
-          </div>
         </div>
         <div class="form-content">
           <i id="hideFormButton" class='bx bx-message-square-x'></i>
@@ -292,7 +217,7 @@
         </div>
         <div class="hero-section">
           <div class="hero-part">
-            <div class="lingua">
+            <div class="lingua" id="python">
               <h1>python</h1>
             </div>
             <div class="hero-flex-content">
@@ -541,7 +466,7 @@
 
 
             <hr>
-              <div class="lingua">
+              <div class="lingua" id="3d">
                 <h1>blender</h1>
               </div>
               <div class="hero-flex-content reverse-order reverse-order-text-right">
@@ -573,7 +498,7 @@
               <hr>
 
 
-              <div class="lingua">
+              <div class="lingua" id="cpp">
                 <h1>c++</h1>
               </div>
               <div class="hero-flex-content">
@@ -603,8 +528,8 @@
               </div>
             </div>
             <hr>
-            <div class="lingua">
-              <h1>frontend projects</h1>
+            <div class="lingua" id="react">
+              <h1>frontend with react</h1>
             </div>
             <div class="hero-flex-content reverse-order reverse-order-text-right">
               <div class="hero-header reverse-order-text-right">
@@ -632,7 +557,7 @@
               </div>
             </div>
 <hr>
-            <div class="lingua">
+            <div class="lingua" id="back-end">
               <h1>back-end</h1>
             </div>
             <div class="hero-flex-content">
@@ -829,6 +754,94 @@
     </div>
   </div>
 </div>
+
+
+<div class="lingua" id="htcs">
+  <h1>HTML/CSS</h1>
+</div>
+<div class="hero-flex-content reverse-order reverse-order-text-right">
+  <div class="hero-header reverse-order-text-right">
+    <h4>html/css</h4>
+    <h1>coffee website</h1>
+    <img src="{% static 'project/images/clone.jpeg' %}" alt="">
+  </div>
+  <div class="hero-para hidden" id="hero-para-19">
+    <i class='bx bx-message-square-x close'></i>
+    <p>For my first shop project, I created a coffee website using HTML and CSS. This website serves as an online platform where users can buy and sell coffee of various varieties. The design includes an attractive and user-friendly layout featuring sections for different coffee products, detailed descriptions, pricing, and an easy-to-navigate shopping cart system. Utilizing HTML, I structured the content and ensured semantic correctness, while CSS was used to style the pages, creating a visually appealing and responsive design that works well on both desktop and mobile devices. This project not only improved my skills in web design and front-end development but also demonstrated my ability to build functional and aesthetically pleasing e-commerce websites.</p>
+  </div>
+  <div class="hero-info info-reverse">
+    <div class="date">
+      <h1>19</h1>
+      <h6>dec 2022</h6>
+    </div>
+    <div class="hero-content">
+      <h1>this was my first shop</h1>
+      <p>buy and sell coffee with different variety</p>
+      <div class="hero-btn">
+        <h3><a href="">git-hub</a><i class='bx bx-right-top-arrow-circle'></i></h3>
+        <h3 class="read-more" data-target="hero-para-19">read more<i class='bx bx-right-top-arrow-circle'></i></h3>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="hero-flex-content">
+  <div class="hero-header">
+    <h4>HTML/CSS</h4>
+    <h1>task app</h1>
+    <img src="{% static 'project/images/chat.jpeg' %}" alt="">
+  </div>
+  <div class="hero-para hidden" id="hero-para-20">
+    <i class='bx bx-message-square-x close'></i>
+    <p>
+      For my first project using HTML and CSS, I developed a task management application designed to be intuitive and user-friendly. This task app allows users to efficiently manage their tasks with features like creating, editing, and deleting tasks. The interface is designed to be clean and minimalist, focusing on functionality without unnecessary distractions. Using HTML, I structured the content with semantic tags, ensuring accessibility and SEO-friendliness, while CSS was applied to style elements, providing a cohesive and visually appealing layout. This project not only enhanced my understanding of front-end development principles but also introduced me to the fundamentals of creating interactive web applications that improve productivity and user experience.
+    </p>
+  </div>
+  <div class="hero-info">
+    <div class="date">
+      <h1>20</h1>
+      <h6>nov 2022</h6>
+    </div>
+    <div class="hero-content">
+      <h1>this was my first project</h1>
+      <p>a task app that doesn't suck</p>
+      <div class="hero-btn">
+        <h3><a href="">git-hub</a> <i class='bx bx-right-top-arrow-circle'></i></h3>
+        <h3 class="read-more" data-target="hero-para-20">read more<i class='bx bx-right-top-arrow-circle'></i></h3>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="hero-flex-content reverse-order reverse-order-text-right">
+  <div class="hero-header reverse-order-text-right">
+    <h4>html/css</h4>
+    <h1>shoe shop</h1>
+    <img src="{% static 'project/images/clone.jpeg' %}" alt="">
+  </div>
+  <div class="hero-para hidden" id="hero-para-21">
+    <i class='bx bx-message-square-x close'></i>
+    <p>For my first completed project, I created a comprehensive list showcasing various shoe designs for a real store. This project involved organizing and presenting different shoe models in a visually appealing and informative manner. Using HTML for structuring content and CSS for styling, I ensured the list was both functional and aesthetically pleasing. Each shoe design was accompanied by detailed descriptions and possibly images, providing customers with a clear overview of available products. This project marked a foundational step in my journey, combining practical web development skills with the goal of enhancing the online presence of a retail store.</p>
+  </div>
+  <div class="hero-info info-reverse">
+    <div class="date">
+      <h1>19</h1>
+      <h6>dec 2021</h6>
+    </div>
+    <div class="hero-content">
+      <h1>this was my first project to complete</h1>
+      <p>a list of shoes designs for a real store</p>
+      <div class="hero-btn">
+        <h3><a href="">git-hub</a><i class='bx bx-right-top-arrow-circle'></i></h3>
+        <h3 class="read-more" data-target="hero-para-21">read more<i class='bx bx-right-top-arrow-circle'></i></h3>
+      </div>
+    </div>
+  </div>
+</div>
+
 
 
 
