@@ -139,6 +139,19 @@ document.body.addEventListener("click", function(event) {
   }
 });
 
+const sliderImgs = document.querySelectorAll('.slider-imag');
+const sliderWrapper = document.querySelector('.slider-wrapper');
+
+sliderImgs.forEach((img, index) => {
+  img.addEventListener('click', () => {
+    sliderWrapper.style.backgroundImage = `url(${img.querySelector('img').src})`;
+    img.style.display = 'none';
+    setTimeout(() => {
+      img.style.display = 'block';
+      sliderWrapper.appendChild(img);
+    }, 0);
+  });
+});
 
 });
 

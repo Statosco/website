@@ -954,12 +954,15 @@ hr
 
 
 
-
+/* 
 .wrapper .slider-wrapper
 {
   min-height: 100vh;
   display: flex;
   background: var(--eerie-black);
+  align-items: center;
+  background-size: cover;
+  background-position: center;
 }
 
 .wrapper .slider-wrapper .slider
@@ -968,31 +971,35 @@ hr
   align-items: last baseline;
 }
 
-.wrapper .slider-wrapper .slider .slider-imag img
+.slider-imag img
 {
-  width: 270px;
-  height: 370px;
+  width: 250px;
+  height: 350px;
   border-radius: 5px;
   position: relative;
   transition: all 0.4s ease-out;
   object-fit: cover;
 }
-.wrapper .slider-wrapper .slider .slider-imag
+.slider-imag
 {
   position: relative;
   margin: 20px;
   cursor: pointer;
 }
-.wrapper .slider-wrapper .slider .slider-imag:hover .slidee-img-txt
+.slider-imag:hover .slidee-img-txt
 {
   transform: scale(0.8);
 }
-.wrapper .slider-wrapper .slider .slider-imag:hover img
+.slider-imag:hover img
 {
-  width: 320px;
-  height: 420px;
+  width: 300px;
+  height: 400px;
 }
-.wrapper .slider-wrapper .slider .slidee-img-txt
+.slider-imag:active img
+{
+  transform: scale(1.1);
+}
+.slidee-img-txt
 {
   position: absolute;
   bottom: 0;
@@ -1003,20 +1010,24 @@ hr
   transition: all 0.4s ease-out;
 
 }
-.wrapper .slider-wrapper .slider .slidee-img-txt h6
+.slidee-img-txt h1
 {
-  font-size: 1.1rem;
+  font-size: 1.2em;
+}
+.slidee-img-txt h6
+{
+  font-size: 1rem;
   font-weight: 600;
   opacity: 0.5;
 }
 
 
-.wrapper .slider-wrapper .slider .slider-text
+.slider-text
 {
-  width: 450px;
+  width: 650px;
   padding: 30px;
 }
-.wrapper .slider-wrapper .slider .slider-text h4
+.slider-text h4
 {
   font-size: 2rem;
   color: var(--white);
@@ -1025,16 +1036,15 @@ hr
   margin-bottom: 30px;
 
 }
-.wrapper .slider-wrapper .slider .slider-text p
+.slider-text p
 {
   font-size: 0.9rem;
   color: var(--small-text-clor);
   letter-spacing: 3px;
-  margin-bottom: 30px;
   line-height: 2;
 }
 
-.wrapper .slider-wrapper .slider .slider-text span
+.slider-text span
 {
   color: var(--white);
   text-transform: capitalize;
@@ -1044,7 +1054,7 @@ hr
    opacity: 0.7;
 }
 
-.wrapper .slider-wrapper .slider .slider-text button
+.slider-text button
 {
   background: transparent;
   border: 3px solid gold;
@@ -1062,3 +1072,10 @@ hr
 .slider:not(:first-child) .slider-text {
   display: none;
 }
+
+.slider-pages
+{
+  display: flex;
+  width: 300px;
+
+} */
