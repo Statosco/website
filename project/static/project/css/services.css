@@ -704,16 +704,7 @@ body
   position: relative;
   text-align: center;
 }
-.hero-section .hero-part .lingua::before
-{
-  content: "";
-  position: absolute;
-  top: 60%;
-  width: 800px;
-  height: 3px;
-  background: var(--white);
-  transform: translateX(-50%);
-}
+
 
 
 
@@ -752,8 +743,15 @@ body
   animation: flow 6s ease-in-out infinite;
   object-fit: cover;
   cursor: pointer;
+  transition: all 0.5s ease-in;
 }
 
+.hero-section .hero-part .hero-flex-content img:hover
+{
+  padding: 10px;
+  object-fit: contain;
+  animation: none;
+}
 
 @keyframes flow {
   0%, 100% {
@@ -863,22 +861,17 @@ body
   position: absolute;
   z-index: 1;
   width: 110%; /* Adjust width to fit your design */
+  /* background: var(--eerie-black2); */
+  
   transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 
-.hero-para p::before,
-.hero-para p::after {
-  content: '';
-  position: absolute;
-  border: 7px solid var(--background-color); /* Adjust color and size as needed */
-  z-index: 3; /* Ensure the borders are behind the paragraph text */
-  width: calc(100% - 100px); /* Adjust width to fit inside padding */
-  height: calc(100% - 290px); /* Adjust height to fit inside padding */
-  border-radius: 9px;
-}
 .hero-para p {
-  border-radius: 9px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.77);
   background: var(--eerie-black2);
+
+  min-width: 500px;
+  border-radius: 9px;
   color: var(--small-text-clor);
   padding: 40px;
   line-height: 2;
@@ -886,7 +879,6 @@ body
   text-transform: capitalize;
   font-weight: 700;
   position: relative;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.77);
 }
 .hero-para.hidden {
   opacity: 0;
@@ -908,22 +900,9 @@ body
 {
   transform: scale(0.9);
 }
-.hero-para p::before {
-  top: 0;
-  left: 0;
-  border-bottom: none;
-  border-right: none;
-}
-
-.hero-para p::after {
-  bottom: 0;
-  right: 0;
-  border-top: none;
-  border-left: none;
-}
 hr
 {
-  margin-bottom: 80px;
+  /* margin-bottom: 80px; */
   width: 100px;
   margin-inline: auto;
   box-shadow: 10px 10px 10px;
@@ -1079,3 +1058,67 @@ hr
   width: 300px;
 
 } */
+
+
+
+@media (max-width: 1010px){
+  .hero-flex-content
+{
+  flex-direction: column;
+  /* border: 2px solid var(--white); */
+  gap: 0;
+  padding: 40PX;
+  align-items: center;
+}
+.hero-flex-content.reverse-order {
+  flex-direction: column;
+}
+.hero-flex-content .hero-header,
+.hero-flex-content  .reverse-order-text-right{
+  text-align: center;
+}
+.hero-flex-content .hero-content{
+  align-items: center;
+  text-align: center;
+}
+.hero-flex-content .hero-info{
+  flex-direction: column;
+  display: none;
+}
+.hero-flex-content .hero-content .hero-btn{
+  justify-content: center;
+}
+.hero-info.info-reverse{
+  margin-top: 0;
+}
+.hero-flex-content .hero-para{
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+.hero-flex-content .hero-para p{
+  
+  padding: 15px;
+}
+.hero-section .hero-part .hero-info{
+  margin-top: 30px;
+
+}
+.hero-section .hero-part .lingua{
+  display: flex;
+  align-items: center;
+  font-size: 1.3rem;
+  justify-content: center;
+  white-space: nowrap;
+}
+
+}
+
+@media (max-width: 850px){
+  .hero-flex-content .hero-para {
+    display: flex;
+    justify-content: center;
+  position: absolute;
+  right: 0;
+  }
+}
