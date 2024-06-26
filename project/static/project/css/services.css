@@ -870,7 +870,7 @@ body
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.77);
   background: var(--eerie-black2);
 
-  min-width: 500px;
+  min-width: 400px;
   border-radius: 9px;
   color: var(--small-text-clor);
   padding: 40px;
