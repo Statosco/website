@@ -10,8 +10,8 @@ def about(response):
     return render(response, 'project/about.html')
 
 
-def socials(response):
-    return render(response, 'project/socials.html')
+def profile(response):
+    return render(response, 'project/credetials.html')
 
 
 from django.http import FileResponse, Http404
