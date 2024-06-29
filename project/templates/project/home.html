@@ -43,7 +43,7 @@
                     font-style: normal;">Solomon...</h1>
                     <h4>MORE ABOUT ME</h4>
                     <h2><a href="">Credentials</a></h2>
-                    <a href=""><button class="top1">
+                    <a href="{% url 'profile' %}"><button class="top1">
                         <span class="material-symbols-outlined">
                             touchpad_mouse
                             </span></button></a>
@@ -87,8 +87,8 @@
                         <a href=""><i class='bx bx-expand-alt'></i></a>
                     </div>
                     <h5>SPECIALIZATION</h5>
-                    <h1><a href="">Services  I Offer:</a></h1>
-                    <a href=""><button class="top1">
+                    <h1><a href="{% url 'services' %}">Services  I Offer:</a></h1>
+                    <a href="{% url 'services' %}"><button class="top1">
                         <span class="material-symbols-outlined">
                             touchpad_mouse
                             </span></button></a>
@@ -103,8 +103,8 @@
                         <a href=""><i class="fa-brands fa-tiktok"></i></a>
                     </div>
                     <h5>Find  Me On The Web:</h5>
-                    <h1><a href="{% url 'socials' %}">Profile</a></h1>
-                    <a href="{% url 'socials' %}"><button class="top1">
+                    <h1><a href="{% url 'profile' %}">Profile</a></h1>
+                    <a href="{% url 'profile' %}"><button class="top1">
                         <span class="material-symbols-outlined">
                             touchpad_mouse
                             </span></button></a>
@@ -119,10 +119,7 @@
                 <div class="right">
                     <span><i class="fa-brands fa-staylinked"></i></span>
                     <h1>LET'S <br>WORK <span class="blue">together.</span></h1>
-                    <a href=""><button class="top1">
-                        <span class="material-symbols-outlined">
-                            touchpad_mouse
-                            </span></button></a>
+                
                 </div>
             </div>
         </div>
