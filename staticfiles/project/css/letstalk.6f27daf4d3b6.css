@@ -1,0 +1,185 @@
+:root{
+    --eerie-black: rgba(29, 31, 35, 0.92);
+    --eerie-black2: rgba(23, 24, 28, 0.913);
+    --ff-syne: 'Syne', sans-serif;
+    --white: hsla(0, 0%, 100%, 1);
+    --blob-radius: 52% 48% 59% 41% / 53% 40% 60% 47%;
+    --background-color: #2d2d2b;
+    --big-text-color: #fff;
+    --border-color:#962d2d;
+    --small-text-clor: grey;
+    --transition-1: 0.25s ease;
+}
+
+.form-content {
+    position: fixed;
+    top: 0px;
+    min-height: 100vh;
+    width: 100%;
+    background: rgba(228, 221, 221, 0.1);
+    backdrop-filter: blur(5px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    z-index: 60;
+    display: none; /* Initial state hidden */
+    opacity: 0;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.5s ease;
+  }
+  .form-content.fade-in {
+    display: flex; /* Make it visible */
+    opacity: 1;    /* Fully visible */
+  }
+  
+  .form-content.fade-out {
+    opacity: 0;    /* Fully transparent */
+  }
+  
+  .form-content i{
+    position: absolute;
+    top: 20px;
+    color: var(--border-color);
+    font-size: 2.5rem;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+    padding-bottom: 10px;
+    border-bottom: 5px solid var(--border-color);
+    display: flex;
+    justify-content: center;
+    width: 50px;
+  }
+  .form-content i:hover
+  {
+    width: 100px;
+  }
+  .form-content i:active
+  {
+    transform: scale(0.9);
+  }
+  
+  .form-content form
+  {
+    background: rgba(140, 8, 8, 0.5);
+    
+    backdrop-filter: blur(5px);
+    box-shadow: 20 20px 50px rgba(0, 0, 0, 3);
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 25px;
+    animation: float 3s ease-in-out infinite;
+    position: relative;
+    min-height: 100%;
+    max-width: 100%;
+    margin-top: 80px;
+  }
+  @keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+  }
+  .form-elements
+  {
+    padding: 50px;
+  }
+  .form-elements .city,
+  .form-elements .email,
+  .form-elements .description,
+  .form-elements .full_name
+  {
+    display: flex;
+    gap: 200px;
+  justify-content: space-between;
+  }
+  
+  .form-elements label
+  {
+    font-size: 2rem;
+    color: var(--small-text-clor);
+    margin: 10px;
+   display: inline-block;
+  }
+  .form-elements input
+  {
+   background: transparent;
+   outline: none;
+   border: 1px solid var(--border-color);
+   padding: 20px;
+   text-align: center;
+  font-size: 1.2rem;
+  height: 20px;
+  color: var(--small-text-clor);
+  display: flex;
+  }
+  
+  .form-elements button
+  {
+    border: none;
+    outline: none;
+    background: linear-gradient(135deg, rgba(255, 0, 0, 0.2), rgba(255, 0, 0, 0.0) 60%);
+    /* margin: 20px 40px; */
+    padding: 15px;
+    border-radius: 10px;
+    color: var(--white);
+    font-size: 17px;
+    letter-spacing: 2px;
+    position: relative;
+    overflow: hidden;
+    transition: background 0.6s ease, box-shadow 0.3s ease;
+    margin-inline: auto;
+    width: 100%;
+    box-shadow: 10px 10px 40px var(--white) ;
+    margin-top: 40px;
+  }
+  
+
+  @media (max-width: 872px){
+    .form-elements label{
+        font-size: 1.2rem;
+    }
+    .form-content form
+    {
+        margin-top: 70px;
+    }
+  }
+  @media (max-width: 803px){
+    .form-elements input{
+        font-size: 1rem;
+        margin: 10px;
+    }
+  }
+  @media (max-width: 757px){
+    .form-elements .city,
+  .form-elements .email,
+  .form-elements .description,
+  .form-elements .full_name
+  {
+    gap: 150px;
+  }
+  .form-content form
+    {
+        margin-top: 100px;
+    }
+  }
+  @media (max-width: 703px){
+    .form-elements .city,
+  .form-elements .email,
+  .form-elements .description,
+  .form-elements .full_name
+  {
+    gap: 50px;
+  }
+  }
+  @media (max-width: 595px){
+    .form-elements .city,
+  .form-elements .email,
+  .form-elements .description,
+  .form-elements .full_name
+  {
+    gap: 20px;
+  }
+  }

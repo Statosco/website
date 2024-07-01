@@ -1,0 +1,1775 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+    text-decoration: none;
+}
+body{
+    background: #131212;
+}
+.main-back {
+   
+    color: #e11212;
+    /* min-height: 5vh; */
+    display: flex;
+    justify-content: center;
+    /* margin-left: 150px; */
+  }
+
+  .content {
+    display: flex;
+    align-items: center;
+    /* margin-left: 100px; */
+    position: absolute;
+    height: auto;
+    width: 100%;
+    max-width: 1200px; /* You can set a maximum width for the content */
+    flex-wrap: wrap;
+
+  }
+.nav{
+    position: relative;
+    height: 120px;
+    /* width: 1712px; */
+    /* background-color: #ffffff; */
+    padding: 17px 0;
+    /* box-shadow: 0 10px 10px rgba(101, 100, 100, 0.256); */
+    display: flex; /* Center horizontally */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    /* margin-right: 0%; */
+    /* margin: 0 700px; */
+}
+.nav ul{
+    list-style-type: none;
+}
+
+.nav li{
+    display: inline-block;
+    flex-direction: column;
+    padding: 13px;
+    transition: all .3s ease-in-out;
+    margin: 23px;
+    font-size: 17px;
+    border-radius: 15px;
+    
+}
+.nav li a{
+    color: #fff;
+}
+.nav li:hover{
+    border: solid  1px #7093c5;
+    border-radius: 2px;
+}
+
+
+
+.top{
+    width: 77px;
+    font-size: 30px;
+    /* Set the border radius to create a rounded border */
+    border-radius: 5px;
+    /* Set the padding to add some space inside the div */
+    /* padding: 10px; */
+    /* Set the background-image property to a linear gradient */
+    background-image: linear-gradient(to right, #b2ebf2 0%, #7093c5 100%);
+    /* Set the background-clip property to border-box */
+    background-clip: border-box;
+    /* Set the background-origin property to padding-box */
+    background-origin: padding-box;
+    /* Set the border width and style */
+    border: 2px solid transparent;
+    /* left: 250px; */
+    position: relative;
+    padding: 20px;
+    margin: 130px;
+    /* z-index: 30; */
+    transition: 0.4s ease-in;
+    height: 90px;
+}
+.top:hover{
+    /* background-image: none; */
+    box-shadow: inset -4px -4px 8px rgba(255,255,255,.6), 4px 4px 10px rgba(255,255,255,.4);
+    cursor: pointer;
+    transform: scale(1.1);
+    color: #8ebec4;
+}
+.top a{
+    color: #fff;
+}
+.top span{
+    font-size: 33px;
+    color: rgb(86, 157, 188);
+}
+.nav button{
+    border: none;
+    background: #333;
+    outline: none;
+    display: inline-block;
+    /* height: 30px; */
+    position: absolute;
+    right: -300px;
+    border-radius: 14px;
+    padding: 10px;
+}
+.nav button a{
+    padding: 30px;
+    color: #fff;
+    font-size: 20px;
+}
+.showcase-1 {
+    position: relative;
+    display: flex;
+    flex-wrap: nowrap;
+    margin-top: 50px;
+}
+
+.showcase-1 .name {
+    box-shadow: 0px 0px 18px 1px rgba(128, 125, 125, 0.111); /* Box shadow */
+    
+    background: #2d2d2b;
+    display: flex; /* Add flex display */
+    align-items: center;
+    overflow: hidden;
+    margin: 0px;
+    position: relative;
+    padding: 60px; /* Add padding for spacing */
+    border-radius: 32px;
+}
+
+.showcase-1 .name img {
+    width: 250px;
+    height: 250px;
+    object-fit: contain;
+    bottom: 0;
+    transform: scale(1.5);
+    
+}
+
+
+.showcase-1 .name .name-left {
+    flex: 1; /* Allow the text to take up remaining space */
+    padding-left: 20px; /* Add padding for spacing between image and text */
+    /* text-align: center; Adjust text alignment as needed */
+
+}
+
+.showcase-1 .name .name-left h3, .ani{
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    position: relative;
+    width: 300px;
+    color: #514d4d;
+    
+}
+.showcase-1 .name .name-left .ani::before{
+    content: "DEVELOPER";
+    color: #9bdee6;
+    animation: words 20s infinite;
+    letter-spacing: 1px;
+    font-weight: 500;
+    font-size: 1.2em;
+}
+.showcase-1 .name .name-left .ani::after{
+    content: "";
+    position: absolute;
+    width: calc(100% + 8px);
+    height: 20px;
+    background-color:#2d2d2b;
+    border-left: 2px solid #7093c5;
+    right: -8px;
+    animation: cursor .4s infinite, typing 20s steps(18) infinite;
+}
+@keyframes cursor{
+    to{
+        border-left: 2px solid #333;
+    }
+}
+@keyframes words{
+    0%,20%{
+        content: "AI DEVELOPER";
+    }
+    21%,40%{
+        content: "SOFTWARE DEVELOPER";
+    }
+    41%,60%{
+        content: "WEB DEVELOPER";
+    }
+    61%,80%{
+        content: "ETHICAL HACKER";
+    }
+    81%,100%{
+        content: "PROGRAMMER";
+    }
+}
+
+@keyframes typing{
+    10%,15%,30%,35%,50%,55%,70%,75%,90%,95%{
+        width: 0;
+    }
+    5%,20%,25%,40%,60%,65%,80%,85%{
+        width: calc(100% + 8px);
+    }
+}
+.showcase-1 .name h1 a{
+    font-size: 40px;
+    color: #fff;
+    font-weight: 400;
+    letter-spacing: 3px;
+}
+.content .top1{
+    background: transparent;
+    border: none;
+    outline: none;
+    color: rgb(83, 79, 79);
+    /* border: 2px solid #8ebec4; */
+    transition: all 0.9 ease-in-out;
+}
+
+.showcase-1 .name button{
+    position: absolute;
+    bottom: 0;
+    padding: 0 50px 40px 0;
+    overflow: auto;
+}
+.showcase-1 .name button span{
+    font-size: 40px;
+
+}
+.showcase-1  .name p{
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    color:  #514d4d;
+}
+
+/* -------------------------------- */
+.highlighter {
+    position: relative;
+    background: #2d2d2ba6;
+    display: inline-block;
+    width: 700px;
+    overflow: hidden;
+    border-radius: 20px;
+    line-height: 30px;
+    text-align: justify;
+    margin-left: 30px;
+    height: 50px;
+    box-shadow: 0px 0px 18px 1px rgba(128, 125, 125, 0.111); /* Box shadow */
+    
+}
+
+.highlighter p {
+    position: relative;
+    white-space: nowrap;
+    animation: scrollText 7s linear infinite;
+    top: 10px;
+    text-transform: uppercase;
+    color: #5a5a57;
+}
+.highlighter p span{
+    color: #fff;
+}
+
+@keyframes scrollText {
+    0% {
+        left: 10%;
+    }
+    100% {
+        left: -100% ; /* Adjust timing as needed */
+        padding-right: 10%;
+    }
+    
+}
+.showcase-1 {
+    position: relative;
+}
+
+.showcase-1 .credentials {
+    width: 23%;
+    position: absolute;
+    top: 70px; /* Adjust top property based on the exact positioning you need */
+    background: #2d2d2ba6;
+    height: 80%; /* Adjust height as needed */
+    border-radius: 32px;
+    right: -1%;
+    /* box-shadow: 0px 0px 100px 5px rgba(133, 130, 130, 0.5); Box shadow */
+    box-shadow: 0px 0px 18px 1px rgba(128, 125, 125, 0.111); /* Box shadow */
+    
+}
+.showcase-1 .credentials h1{
+    position: absolute;
+    left: 17%;
+    top: 20%;
+    font-size: 60px;
+    color: #514d4d;
+}
+.showcase-1 .credentials h4{
+    position: absolute;
+    bottom: 70px;
+    padding-left: 10%;
+    letter-spacing: 1px;
+    font-size: .9em;
+    color: #514d4d;
+}
+
+.showcase-1 .credentials h2{
+    letter-spacing: 3px;
+    position: absolute;
+    bottom: 20px;
+    padding-left: 10%;
+    font-size: 30px;
+    
+}
+.showcase-1 .credentials h2 a{
+    color: #fff;
+}
+.showcase-1 .credentials button span{
+    position: absolute;
+    bottom: 22px;
+    right: 20px;
+    font-size: 40px;
+}
+
+ 
+
+.showcase-1 .portfolio {
+    width: 23%; /* Adjust width as needed */
+    position: absolute;
+    top: 70px; /* Adjust top property based on the exact positioning you need */
+    background: #2d2d2ba6; /* Example background, adjust as needed */
+    height: 80%; /* Adjust height as needed */
+    border-radius: 32px; /* Example border radius */
+    /* box-shadow: 0px 0px 100px 5px rgba(133, 130, 130, 0.5); Box shadow */
+    right: 24%;
+    box-shadow: 0px 0px 18px 1px rgba(128, 125, 125, 0.111); /* Box shadow */
+    
+}
+.showcase-1 .portfolio h1{
+    font-size: 40px;
+    padding: 39px;
+    /* box-shadow: 0 2px 30px -5px rgba(233, 220, 220, 0.531); */
+    border-radius: 32px;
+    color: #a9a9a9a1;
+    position: relative;
+}
+.showcase-1 .portfolio h1::after{
+    content: "";
+    position: absolute;
+    width: 220px;
+    height: 160px;
+    background-image: url("/static/project/images/books.jpg");
+    background-size: cover; /* Adjust this to fit your layout */
+    background-position: center;
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+    opacity: 0.2;
+    top: 70px;
+}
+.showcase-1 .portfolio h6{
+    font-size: 20px;
+    letter-spacing: 1px;
+    padding: 52px 0 0px 30px;
+    color:#514d4d;
+    
+}
+.showcase-1 .portfolio h2{
+    font-size: 27px;
+    letter-spacing: 2px;
+    padding: 15px 0 0px 30px;
+    
+}
+.showcase-1 .portfolio h2 a{
+    color: #fff;
+}
+.showcase-1 .portfolio button span{
+    position: absolute;
+    right: 20px;
+    bottom: 25px;
+    font-size: 40px;
+    opacity: 1;
+    
+}
+
+
+/* -------------------------------- */
+
+
+
+.content .showcase-2{
+    position: relative;
+    display: flex;
+    flex-wrap: nowrap;
+}
+.showcase-2 .cv{
+    position: relative;
+    width: 370px;
+    background: #2d2d2ba6;
+    margin: 30px 30px 30px 0;
+    border-radius: 33px;
+    height: 300px;
+}
+.showcase-2 .cv img{
+    position: absolute;
+    height: 200px;
+    width: 170px;
+    padding-top: 10px;
+    left: 27%;
+}
+.showcase-2 .cv h6{
+    position: absolute;
+    bottom: 27%;
+    font-size: 17px;
+    letter-spacing: 1px;
+    color: #514d4d;
+    left: 8%;
+}
+.showcase-2 .cv h1{
+    position: absolute;
+    bottom: 11%;
+    left: 8%;
+    
+}
+.showcase-2 .cv h1 a{
+    color: #fff;
+    font-size: 0.8em;
+    letter-spacing: 1px;
+    font-weight: 500;
+}
+
+a:hover{
+    color: #43b3c2 !important;
+}
+.showcase-2 .cv  span{
+    position: absolute;
+    bottom:11%;
+    right: 20px;
+    font-size: 40px;
+}
+a button span:hover{
+    color: #43b3c2c2 !important;
+    transform: scale(1.2);
+
+}
+
+.showcase-2 .services{
+    position: relative;
+    width: 650px;
+    background: #2d2d2ba6;
+    margin: 30px 30px 30px 0;
+    border-radius: 33px;
+    height: 300px;
+    overflow: hidden;
+}
+.showcase-2 .services .initials{
+    top: 40%;
+    position: absolute;
+    flex-wrap: nowrap;
+    width: 1750px;
+    animation: move-left 10s linear infinite;
+
+}
+
+  
+.showcase-2 .services .initials a{
+    transition: border 0.3s ease;
+    padding: 15px;
+    margin: 0 20px;
+    width: 100%;
+    font-size: 40px;
+    color: #fff;
+}
+.showcase-2 .services .initials a:hover {
+    border-color: #43b3c2;
+    border-top: 2px solid #43b3c2;
+    border-right: 2px solid #43b3c2;
+    border-bottom: 2px solid #43b3c2;
+    border-left: 2px solid transparent;
+    transform: rotate(10deg);
+  }
+
+  
+.showcase-2 .services h5{
+    position: absolute;
+    bottom: 27%;
+    font-size: 17px;
+    letter-spacing: 1px;
+    color: #514d4d;
+    left: 5%;
+} 
+
+.showcase-2 .services h1{
+    position: absolute;
+    bottom: 9%;
+    left: 5%;
+}
+
+.showcase-2 .services  span{
+    position: absolute;
+    bottom:11%;
+    right: 20px;
+    font-size: 40px;
+}
+.showcase-2 .services h1 a, .profile h1 a{
+    color: #fff;
+}
+.showcase-2 .profile {
+    position: relative;
+    width: 350px;
+    background: #2d2d2ba6;
+    margin: 30px 30px 30px 0;
+    border-radius: 33px;
+    height: 300px;
+    overflow: hidden;
+  }
+  
+  .showcase-2 .profile .socials {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style-type: none;
+    margin-top: 15%;
+    width: 100%;
+    animation: moveProfile 20s linear infinite;
+  }
+  
+  .showcase-2 .profile .socials a {
+    /* color: #fff; */
+    /* background: #454544; */
+    border-radius: 50%;
+    padding: 30px;
+    font-size: 40px;
+    margin: 0 40px;
+    width: 100px;
+    height: 100px;
+    line-height: 40px;
+  }
+
+.showcase-2 .profile h5{
+    position: absolute;
+    bottom: 27%;
+    font-size: 17px;
+    letter-spacing: 1px;
+    color: #514d4d;
+    left: 5%;
+}
+
+.showcase-2 .profile h1{
+    position: absolute;
+    bottom: 9%;
+    left: 5%;
+    letter-spacing: 3px;
+}
+
+.showcase-2 .profile span{
+    position: absolute;
+    bottom:11%;
+    right: 20px;
+    font-size: 40px;
+}
+
+.socials > a:nth-child(1) {
+    color: #333 ;
+    background-color: #fff;
+}
+
+.socials > a:nth-child(2) {
+    color: #fff;
+    background: linear-gradient(135deg, #405DE6, #5B51D8, #833AB4, #C13584, #E1306C, #FD1D1D, #F56040, #F77737, #FCAF45, #FFDC80);
+
+}
+
+.socials > a:nth-child(3) {
+    background-color: #1877F2;
+    color: #fff;
+}
+.socials > a:nth-child(4) {
+    background-color: #fff;
+    color:  #181717 ;
+}
+.socials > a:nth-child(5) {
+    background-color: #0077B5;
+    color: #fff;
+}
+.socials > a:nth-child(6) {
+    color: #fff;
+    background-color: #000;
+}
+
+
+/*-------------------*/
+
+.showcase-3{
+    display: flex;
+    flex: 1;
+
+}
+.showcase-3 .left{
+    position: relative;
+    width: 60%;
+    background: #2d2d2ba6;
+    border-radius: 33px;
+    height: 300px;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.showcase-3 .left h4{
+    color: #514d4d;
+    padding: 90px 50px;
+    border-radius: 33px;
+    background: #2d2d2b33;
+    /* margin: 0 2%; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 25%;
+    text-align: center;
+    letter-spacing: 3px;
+}
+
+.showcase-3 .left h4 span{
+    color: #f5e9e9;
+    position: absolute;
+    top: 30%;
+    font-size: 30px;
+    letter-spacing: 3px;
+}
+.showcase-3 .right{
+    position: absolute;
+    width: 700px;
+    background: #2d2d2ba6;
+    border-radius: 33px;
+    height: 300px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+    left: 60%;
+    display: flex;
+    flex: 2;
+}
+
+.showcase-3 .right span i{
+    position: absolute;
+    font-size: 30rem;
+    color: #5249498e;
+    top: 0;
+    left: 8%;
+    z-index: 1;
+}
+.showcase-3 .right h1{
+    padding: 60px 0 0 5%;
+    font-size: 40px;
+    letter-spacing: 3px;
+}
+.showcase-3 .right .material-symbols-outlined{
+    position: absolute;
+    bottom:11%;
+    right: 20px;
+    font-size: 40px;
+}
+.showcase-3 .right .blue{
+    color: #1876f2cc;
+    z-index: 2;
+    position: relative;
+}
+
+.nav .show-icons{
+    position: absolute;
+    z-index: 9;
+    top: -300px;
+    left: -75px;
+    display: none;
+}
+.nav .show-icons .show{
+    font-size: 50px;
+    position: absolute;
+    left: 80px;
+    cursor: pointer;
+
+}
+.nav .show-icons .hide{
+    display: flex;
+}
+.nav .show-icons .hide .span{
+    position: absolute;
+    right: 10px;
+    font-size: 30px;
+    cursor: pointer;
+}
+.nav .show-icons .hide{
+    display: none;
+}
+
+
+.nav .show-icons .hide ul{
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    background: #00000055;
+    width: 200px;
+    align-items: center;
+    border-radius: 3px;
+}
+
+/*-------------------*/
+
+.footer{
+        position: relative;
+        margin-top: 1400px;
+        border: 2px solid linear-gradient(90deg, rgba(61,116,232,1) 0%, rgba(27,71,209,1) 35%, rgba(72,203,230,1) 100%);
+        text-align: center;
+}
+.footer ul{
+    display: flex;
+    list-style-type: none;
+}
+.footer h1{
+    letter-spacing: 3px;
+}
+.footer ul li{
+    padding: 30px;
+}
+.footer ul li a{
+    color: #514d4d;
+    letter-spacing: 3px;
+    font-size: 20px;
+}
+.footer h4{
+    letter-spacing: 3px;
+    color: #514d4d;
+    padding-bottom: 50px;
+}
+.footer h4 a{
+    color: #6b91bccc;
+    letter-spacing: 3px;
+    font-size: 1.3em;
+}
+
+
+
+@media (max-width: 1850px){
+    .content { 
+        position: absolute;
+        left: 30px;
+        /* color: #1877F2; */
+      
+    }
+}
+
+
+@media (max-width: 1435px){
+    body {
+        overflow-x: hidden; /* Prevent horizontal scrolling */
+    }
+    .content {
+        position: absolute;
+        margin-left: 60px;
+    }
+                                                                     
+    .top{
+        
+        left: -100px;
+    }
+    .nav button{
+        right: -300px;
+    }
+    .nav ul{
+        margin-left: -100px;
+    }
+    .showcase-1{
+        flex-wrap: wrap;
+    }
+    .showcase-1 .highlighter{
+        width: 1250px;
+        margin: 30px 0 0 0;
+    }
+    .showcase-2{
+        margin-top: 400px;
+    }
+    .showcase-1 .portfolio{
+        margin-top: 410px;
+        left: 0;
+        width: 600px;
+    }
+    .showcase-1 .portfolio h1{
+        font-size: 50px;
+        margin-left: 130px;
+    }
+    .showcase-1 .portfolio h1::after{
+        width: 400px;
+        height: 200px;
+        left: -40px;
+    }
+    .showcase-1 .portfolio h6{
+        bottom: 30px;
+        position: absolute;
+    }
+
+    .showcase-1 .credentials{
+        height: 370px;
+        top: 0;
+        left: 750px;
+        width: 500px;
+    }
+    .showcase-2 .cv{
+        position: absolute;
+        right: 0px;
+        top: -400px;
+        width: 615px;
+        height: 350px;
+    }
+    .showcase-2 .cv img{
+        height: 300px;
+        width: 300px;
+    }
+    .showcase-2 .profile{
+        width: 500px;
+    }
+    .showcase-2 .services{
+        width: 720px;
+    }
+    .showcase-3 .left{
+        width: 630px;
+    }
+    .showcase-3 .right{
+        width: 600px;
+        margin-left:-60px;
+    }
+   
+    .footer{
+        margin-top: 1800px;
+    }
+}
+@media (max-width: 1401px){
+    body {
+        overflow-x: hidden; /* Prevent horizontal scrolling */
+    }
+    .content {
+        position: absolute;
+        margin-left: 20px;
+    }
+}
+@media (max-width: 1354px){
+    body {
+        overflow-x: hidden; /* Prevent horizontal scrolling */
+    }
+    .content {
+        position: absolute;
+        margin-left: 20px;
+    }
+}
+
+
+@media (max-width: 1435px){
+    body {
+        overflow-x: hidden; /* Prevent horizontal scrolling */
+    }
+    .content {
+        position: absolute;
+        margin-left: 60px;
+    }
+                                                                     
+    .top{
+        
+        left: -100px;
+    }
+    .nav button{
+        right: -300px;
+    }
+    .nav ul{
+        margin-left: -100px;
+    }
+    .showcase-1{
+        flex-wrap: wrap;
+    }
+    .showcase-1 .highlighter{
+        width: 1200px;
+        margin: 30px 0 0 0;
+    }
+    .showcase-2{
+        margin-top: 400px;
+    }
+    .showcase-1 .portfolio{
+        margin-top: 410px;
+        left: 0;
+        width: 600px;
+    }
+    .showcase-1 .portfolio h1{
+        font-size: 50px;
+        margin-left: 130px;
+    }
+    .showcase-1 .portfolio h1::after{
+        width: 400px;
+        height: 200px;
+        left: -40px;
+    }
+    .showcase-1 .portfolio h6{
+        bottom: 30px;
+        position: absolute;
+    }
+
+    .showcase-1 .credentials{
+        height: 370px;
+        top: 0;
+        left: 750px;
+        width: 450px;
+    }
+    .showcase-2 .cv{
+        position: absolute;
+        right: 0px;
+        top: -400px;
+        width: 565px;
+        height: 350px;
+    }
+    .showcase-2 .cv img{
+        height: 300px;
+        width: 300px;
+    }
+    .showcase-2 .profile{
+        width: 450px;
+    }
+    .showcase-2 .services{
+        width: 720px;
+    }
+    .showcase-3 .left{
+        width: 630px;
+    }
+    .showcase-3 .right{
+        width: 550px;
+        margin-left:-60px;
+    }
+   
+    .footer{
+        margin-top: 1800px;
+    }
+}
+
+@media (max-width: 1322px){
+    body {
+        overflow-x: hidden; /* Prevent horizontal scrolling */
+    }
+    .content {
+        position: absolute;
+        margin-left: 10px;
+    }
+}
+
+@media (max-width: 1295px){
+    .showcase-1{
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+
+
+
+@media (max-width: 1280px){
+    body {
+        overflow-x: hidden; /* Prevent horizontal scrolling */
+    }
+    .content {
+        position: absolute;
+        margin-left: 10px;
+    }
+                                                                     
+    .top{
+        
+        left: -100px;
+    }
+    .nav button{
+        right: -200px;
+    }
+    .nav ul{
+        margin-left: -100px;
+    }
+    .showcase-1{
+        flex-wrap: wrap;
+    }
+    .showcase-1 .highlighter{
+        width: 1150px;
+        margin: 30px 0 0 0;
+    }
+    .showcase-2{
+        margin-top: 400px;
+    }
+    .showcase-1 .portfolio{
+        margin-top: 410px;
+        left: 0;
+        width: 600px;
+    }
+    .showcase-1 .portfolio h1{
+        font-size: 50px;
+        margin-left: 130px;
+    }
+    .showcase-1 .portfolio h1::after{
+        width: 400px;
+        height: 200px;
+        left: -40px;
+    }
+    .showcase-1 .portfolio h6{
+        bottom: 30px;
+        position: absolute;
+    }
+
+    .showcase-1 .credentials{
+        height: 370px;
+        top: 0;
+        left: 750px;
+        width: 400px;
+    }
+    .showcase-2 .cv{
+        position: absolute;
+        right: 0px;
+        top: -400px;
+        width: 515px;
+        height: 350px;
+    }
+    .showcase-2 .cv img{
+        height: 300px;
+        width: 300px;
+    }
+    .showcase-2 .profile{
+        width: 400px;
+    }
+    .showcase-2 .services{
+        width: 720px;
+    }
+    .showcase-3 .left{
+        width: 630px;
+    }
+    .showcase-3 .right{
+        width: 500px;
+        margin-left:-60px;
+    }
+   
+    .footer{
+        margin-top: 1800px;
+    }
+}
+
+
+
+@media (max-width: 1234px){
+    body {
+        overflow-x: hidden; /* Prevent horizontal scrolling */
+    }
+    .content {
+        position: absolute;
+        margin-left: 40px;
+    }
+    .showcase-1 .name{
+        width: 600px;
+    }
+
+                                                                     
+    .top{
+        
+        left: -100px;
+    }
+    .nav button{
+        right: -150px;
+        position: absolute;
+        padding: 0;
+    }
+    .nav button a{
+        font-size: 15px;
+    }
+    .nav ul{
+        margin-left: -150px;
+    }
+    .showcase-1{
+        flex-wrap: wrap;
+    }
+    .showcase-1 .highlighter{
+        width: 1040px;
+        margin: 30px 0 0 0;
+    }
+    .showcase-2{
+        margin-top: 400px;
+    }
+    .showcase-1 .portfolio{
+        margin-top: 410px;
+        left: 0;
+        width: 550px;
+    }
+    .showcase-1 .portfolio h1{
+        font-size: 50px;
+        margin-left: 130px;
+    }
+    .showcase-1 .portfolio h1::after{
+        width: 400px;
+        height: 200px;
+        left: -40px;
+    }
+    .showcase-1 .portfolio h6{
+        bottom: 30px;
+        position: absolute;
+    }
+
+    .showcase-1 .credentials{
+        height: 370px;
+        top: 0;
+        left: 630px;
+        width: 400px;
+    }
+    .showcase-2 .cv{
+        position: absolute;
+        right: 10px;
+        top: -400px;
+        width: 470px;
+        height: 360px;
+    }
+    .showcase-2 .cv img{
+        height: 300px;
+        width: 300px;
+    }
+    .showcase-2 .profile{
+        width: 400px;
+    }
+    .showcase-2 .services{
+        width: 620px;
+    }
+    .showcase-3 .left{
+        width: 600px;
+    }
+    .showcase-3 .left h4{
+
+        box-shadow: 0px 0px 18px 1px rgba(128, 125, 125, 0.292); /* Box shadow */
+    }
+
+    .showcase-3 .right{
+        width: 430px;
+        margin-left:-90px;
+    }
+   
+    .footer{
+        margin-top: 1800px;
+    }
+}
+@media (max-width: 1215px){
+
+    .showcase-3 .left{
+        width: 580px;
+    }
+}
+@media (max-width: 1165px){
+
+    .showcase-3 .left{
+        width: 550px;
+    }
+    .showcase-3 .right{
+        position: absolute;
+        width: 460px;
+    }
+}
+@media (max-width: 1158px){
+
+    .content {
+        position: absolute;
+        margin-left: 10px;
+    }
+}
+
+@media (max-width: 1117px){
+
+    .content {
+        position: absolute;
+        margin-left: 0px;
+    }
+
+}
+@media (max-width: 1115px){
+
+    .showcase-3 .left{
+        width: 550px;
+    }
+    .showcase-3 .right{
+        position: absolute;
+        width: 480px;
+    }
+}
+@media (max-width: 1105px){
+
+    .showcase-3 .left{
+        width: 540px;
+    }
+    .showcase-3 .right{
+        position: absolute;
+        width: 480px;
+    }
+}
+@media (max-width: 1094px){
+    .showcase-2 .cv{
+        width: 450px;
+    }
+
+ .showcase-2 .profile{
+        width: 380px;
+    }
+}
+@media (max-width: 1101px){
+
+    .top{
+        font-size: 20px;
+        width: 59px;
+        height: 60px;
+        line-height: 15px;
+    }
+     .showcase-1 .name{
+        width: 550px;
+        overflow: hidden;
+    }
+    .showcase-1 .name button{
+    position: absolute;
+    bottom: -30px;
+    right: -30px;
+    }
+    .showcase-1 .credentials{
+        left: 570px;
+    }
+    .showcase-1 .highlighter{
+        width: 970px;
+    }
+    .showcase-1 .portfolio{
+        width: 500px;
+    }
+    .showcase-1 .portfolio h1{
+        font-size: 40px;
+        margin-left: 100px;
+    }
+    .showcase-1 .portfolio h1::after{
+        width: 300px;
+        height: 200px;
+        left: -10px;
+    }
+    .showcase-2 .services{
+        width: 570px;
+    }
+    .showcase-2 .profile{
+        width: 370px;
+    }
+    .showcase-2 .cv{
+        right: 3px;
+    }
+    .showcase-3 .left{
+        width: 480px;
+    }
+    .showcase-3 .left h4{
+        padding: 90px 30px;
+        background: none;
+        border-radius: 0;
+        box-shadow: none;
+    }
+    .showcase-3 .left h4 span{
+        top: 20%;
+    }
+    .showcase-3 .right{
+        position: absolute;
+        width: 456px;
+        
+    }
+    .nav button{
+        right: -119px;
+    }
+    .nav ul{
+        margin-left: -160px;
+    }
+}
+@media (max-width: 1030px){
+
+    .top{
+        font-size: 20px;
+        width: 59px;
+        height: 60px;
+        line-height: 15px;
+    }
+     .showcase-1 .name{
+        width: 550px;
+        overflow: hidden;
+    }
+    .showcase-1 .name button{
+    position: absolute;
+    bottom: -30px;
+    right: -30px;
+    }
+    .showcase-1 .credentials{
+        left: 570px;
+        width: 340px;
+    }
+    .showcase-1 .highlighter{
+        width: 910px;
+    }
+    .showcase-1 .portfolio{
+        width: 450px;
+    }
+    .showcase-1 .portfolio h1{
+        font-size: 40px;
+        margin-left: 100px;
+    }
+    .showcase-1 .portfolio h1::after{
+        width: 300px;
+        height: 200px;
+        left: -20px;
+    }
+    .showcase-2 .services{
+        width: 520px;
+    }
+    .showcase-2 .profile{
+        width: 360px;
+    }
+    .showcase-2 .cv{
+        right: -3px;
+    }
+    .showcase-3 .left{
+        width: 460px;
+    }
+    .showcase-3 .left h4{
+        padding: 90px 20px;
+        background: none;
+        border-radius: 0;
+        box-shadow: none;
+    }
+    .showcase-3 .left h4 span{
+        top: 20%;
+    }
+    .showcase-3 .right{
+        position: absolute;
+        width: 430px;
+        
+    }
+    .nav button{
+        right: -111px;
+    }
+    .nav ul{
+        margin-left: -160px;
+    }
+}
+
+@media (max-width: 964px){
+    .content{
+        left: 70px;
+    }
+      /* Stack elements vertically on smaller screens */
+  .showcase-1,
+  .showcase-2,
+  .showcase-3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  /* Adjust specific elements as needed */
+  .name,
+  .highlighter,
+  .credentials,
+  .portfolio,
+  .cv,
+  .services,
+  .profile,
+  .left,
+  .right {
+    margin-bottom: 20px; /* Add space between stacked elements */
+  }
+  .showcase-1 .name{
+    width: 800px;
+  }
+  .showcase-1 .name img{
+    transform: scale(2);
+    margin-top: 60px;
+  }
+  .showcase-1 .name .name-left h3{
+    font-size: 19px;
+    width: 600px;
+  }
+  .showcase-1 .name .name-left .ani::after{
+    height: 36px;
+  }
+  .ani{
+    font-size: 23px;
+  }
+
+  
+
+  .showcase-1 .highlighter{
+    width: 800px;
+  }
+  .showcase-1 .credentials{
+    left: 0px;
+    top: 1700px;
+    width: 800px;
+    
+  }
+  .showcase-1 .credentials h1{
+    font-size: 130px;
+    padding-left: 100px;
+  }
+  .showcase-1 .portfolio{
+    left: 0px;
+    top: 520px;
+    width: 800px;
+  }
+  .showcase-1 .portfolio h1{
+    font-size: 100px;
+  }
+
+  .showcase-1 .portfolio h1::after{
+    width: 670px;
+    height: 250px;
+    left: -40px;
+    border-radius: 6px;
+}
+  
+  .showcase-2 .services{
+    left: 0px;
+    top: 430px;
+    width: 800px;
+    
+  }
+  .showcase-2 .cv{
+    left: 0px;
+    width: 420px;
+  }
+  .showcase-2 .profile{
+    position: absolute;
+    right: 0px;
+    margin-top: -720px;
+    height: 360px;
+  }
+  .showcase-3 .left{
+    top: 2270px;
+    position: absolute;
+    left: 0;
+    width: 800px;
+  }
+  .showcase-3 .right{
+    top: 2600px;
+    position: absolute;
+    left: 90px;
+    width: 800px;
+  }
+  .nav .top{
+    position: absolute;
+    background: none;
+    color: #fff;
+    margin-top: 250px;
+    margin-left: 400px;
+  }
+  .nav .top a{
+    font-size: 1.2em;
+  }
+  .nav ul{
+    margin-left: -10px;
+  }
+  .footer{
+    margin-top: 3000px;
+  }
+}
+@media (max-width: 925px){
+    .content{
+        left: 50px;
+    }
+}
+@media (max-width: 901px){
+    .content{
+        left: 30px;
+    }
+}
+@media (max-width: 870px){
+    .content{
+        left: 10px;
+    }
+}
+@media (max-width: 842px){
+    .content{
+        left: 70px;
+        margin-top: 100px;
+    }
+
+      /* Stack elements vertically on smaller screens */
+  .showcase-1,
+  .showcase-2,
+  .showcase-3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+ .nav ul{
+    display: none;
+  }
+  .nav .top{
+    position: absolute;
+    top: -530px;
+    z-index: 8;
+  }
+  
+  /* Adjust specific elements as needed */
+  .name,
+  .highlighter,
+  .credentials,
+  .portfolio,
+  .cv,
+  .services,
+  .profile,
+  .left,
+  .right {
+    margin-bottom: 20px; /* Add space between stacked elements */
+  }
+  .showcase-1 .name{
+    width: 700px;
+  }
+  .showcase-1 .name img{
+    transform: scale(1.5);
+    margin-top: 60px;
+  }
+  .showcase-1 .name .name-left h3{
+    font-size: 19px;
+    width: 400px;
+  }
+  .showcase-1 .name .name-left .ani::after{
+    height: 36px;
+  }
+  .ani{
+    font-size: 23px;
+  }
+
+  .nav .show-icons{
+    display: block;
+  }  
+
+  .showcase-1 .highlighter{
+    width: 700px;
+  }
+  .showcase-1 .credentials{
+    left: 0px;
+    top: 1700px;
+    width: 700px;
+    
+  }
+  .showcase-1 .credentials h1{
+    font-size: 130px;
+    padding-left: 50px;
+  }
+  .showcase-1 .portfolio{
+    left: 0px;
+    top: 520px;
+    width: 700px;
+  }
+  .showcase-1 .portfolio h1{
+    font-size: 50px;
+  }
+
+  .showcase-1 .portfolio h1::after{
+    width: 570px;
+    height: 250px;
+    left: -40px;
+    border-radius: 6px;
+}
+  
+  .showcase-2 .services{
+    left: 0px;
+    top: 430px;
+    width: 700px;
+    
+  }
+  .showcase-2 .cv{
+    left: 0px;
+    width: 340px;
+  }
+  .showcase-2 .cv img{
+    width: 150px;
+  }
+  .showcase-2 .profile{
+    position: absolute;
+    right: 0px;
+    margin-top: -720px;
+    width: 340px;
+    height: 360px;
+  }
+  .showcase-3 .left{
+    top: 2170px;
+    position: absolute;
+    left: 0;
+    width: 700px;
+  }
+  .showcase-3 .right{
+    top: 2500px;
+    position: absolute;
+    left: 90px;
+    width: 700px;
+  }
+  .nav .top{
+    position: absolute;
+    background: none;
+    color: #fff;
+    margin-top: 250px;
+    margin-left: 400px;
+  }
+  .nav .top a{
+    font-size: 1.2em;
+  }
+  .nav ul{
+    margin-left: -10px;
+  }
+  .footer{
+    margin-top: 3000px;
+  }
+}
+
+
+
+@media (max-width: 822px){
+    .content{
+        left: 50px;
+    }
+}
+@media (max-width: 803px){
+    .content{
+        left: 40px;
+    }
+    .nav .show-icons .hide{
+        padding-left: 50px;
+    }
+}
+@media (max-width: 780px){
+    .content{
+        left: 20px;
+    }
+}
+@media (max-width: 756px){
+    .content{
+        left: 10px;
+    }
+}
+@media (max-width: 735px){
+
+    .content{
+        left: 5px;
+    }
+}
+@media (max-width: 717px){
+    body{
+        overflow-x: auto;
+    }
+    .content{
+        left: 50px;
+        margin-top: 1px;
+        height: 100%;
+    }
+
+    .content .nav button
+    {
+        position: relative;
+        right: -260px;
+        top: 30px;
+    }
+    .showcase-1 .name{
+        max-width: 600px;
+      }
+      .showcase-1 .name img{
+        transform: scale(1.3);
+        margin-top: 10px;
+      }
+       .showcase-1 .name .name-left h3{
+    font-size: 14px;
+  }
+   .ani{
+    font-size: 15px;
+  }
+    .showcase-1 .name .name-left .ani::after{
+    min-height: 28px;
+    }
+    .showcase-1 .name h1 a{
+        font-size: 30px;
+    }
+    .showcase-1 .name p{
+        font-size: 14px;
+        left: 0;
+    }
+
+    .nav .top{
+    position: absolute;
+    top: -200px;
+    z-index: 8;
+    left: -200px;
+  }
+  .nav{
+    width: 100%;
+
+  }
+  .nav button{
+    /* width: 100%; */
+    right: 100px;
+    height: 50px;
+  }
+    .showcase-1 .highlighter{
+    width: 600px;
+  }
+  .showcase-1 .credentials{
+    left: 0px;
+    top: 1980px;
+    width: 600px;
+  }
+  .showcase-1 .credentials h1{
+    font-size: 130px;
+    padding-left: 1px;
+  }
+  .showcase-1 .portfolio{
+    left: 0px;
+    top: 850px;
+    width: 600px;
+  }
+  .showcase-1 .portfolio h1::after{
+    width: 470px;
+    height: 250px;
+    left: -40px;
+    border-radius: 6px;
+}
+.showcase-2 .services{
+    left: 0px;
+    top: 760px;
+    width: 600px;
+    
+  }
+  .showcase-2 .cv{
+    left: 0px;
+    width: 600px;
+  }
+  .showcase-2 .profile{
+    position: absolute;
+    right: 0px;
+    margin-top: 60px;
+    width: 600px;
+    height: 360px;
+  }
+  .showcase-3 .left{
+    top: 2550px;
+    position: absolute;
+    left: 0;
+    width: 600px;
+    padding: 20px;
+  }
+  .showcase-3 .right{
+    top: 2880px;
+    position: absolute;
+    left: 90px;
+    width: 600px;
+  }
+  .nav .show-icons{
+    top: 40px;
+  }
+  .footer{
+    margin-top: 3300px;
+  }
+}
