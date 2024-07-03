@@ -114,6 +114,7 @@ body{
     right: -300px;
     border-radius: 14px;
     padding: 10px;
+    /* display: none; */
 }
 .nav button a{
     padding: 30px;
@@ -1673,6 +1674,7 @@ a button span:hover{
         position: relative;
         right: -260px;
         top: 30px;
+        display: none;
     }
     .showcase-1 .name{
         max-width: 600px;

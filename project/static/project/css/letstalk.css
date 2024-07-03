@@ -94,6 +94,7 @@
     display: flex;
     gap: 200px;
   justify-content: space-between;
+  flex-wrap: wrap;
   }
   
   .form-elements label
@@ -180,6 +181,23 @@
   .form-elements .description,
   .form-elements .full_name
   {
-    gap: 20px;
+    gap: 10px;
+    flex-direction: column;
+    transform: scale(0.7);
+    padding: 0;
+  }
+  .form-content form
+  {
+    width: 80%;
+    overflow:visible;
+  }
+  .form-elements
+  {
+    padding: 10px;
+  }
+  .form-elements button
+  {
+    margin-top: 10px;
+    transform: scale(0.5);
   }
   }
