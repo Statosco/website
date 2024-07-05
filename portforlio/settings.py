@@ -25,7 +25,7 @@ SECRET_KEY = "django-insecure-ld%g!wm2ftqthp1^c*l*z%4r67nq6s)8$ib5p@(d2cm^u2xf9q
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['siteforlio.online', 'www.siteforlio.online', '16.171.199.78']
+ALLOWED_HOSTS = ['siteforlio.online', 'www.siteforlio.online', '51.20.55.90']
 
 
 
